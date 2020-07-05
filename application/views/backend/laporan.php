@@ -30,14 +30,14 @@
                         <td style="text-align:center;vertical-align:middle">1</td>
                         <td style="vertical-align:middle;">Laporan Data Tiket Pertanggal</td>
                         <td style="text-align:center;">
-                            <a class="btn btn-sm btn-default" href="#lap_jual_pertanggal" data-toggle="modal"><span class="fa fa-print"></span> Print</a>
+                            <a class="btn btn-sm btn-default" href="#lap_jual_pertanggal" data-toggle="modal">Download PDF</a>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:center;vertical-align:middle">2</td>
                         <td style="vertical-align:middle;">Laporan Data Tiket Perbulan</td>
                         <td style="text-align:center;">
-                            <a class="btn btn-sm btn-default" href="#lap_jual_perbulan" data-toggle="modal"><span class="fa fa-print"></span> Print</a>
+                            <a class="btn btn-sm btn-default" href="#lap_jual_perbulan" data-toggle="modal">Download PDF</a>
                         </td>
                     </tr>
                 </tbody>

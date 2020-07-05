@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logobus.png">
     <title><?php echo $title ?></title>
     <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -114,10 +115,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Nama Bank : <b> <?php echo $bank['nama_bank']?>]</b></p>
+                  <p>Nama Bank : <b> <?php echo $bank['nama_bank']?></b></p>
                   <p>Nama Nasabah: <b><?php echo strtoupper($bank['nasabah_bank']) ?></b></p>
-                  <p>Nomor Rekening : <b><?php echo $bank['nomrek_bank']; ?> Kursi</b></p>
-                  <p>Photo Bank : <img id="myImg" src="<?php echo base_url($bank['photo_bank']) ?>" alt="<?php echo $bank['nama_bank'] ?>" style="width:100%;max-width:300px"></p>
+                  <p>Nomor Rekening : <b><?php echo $bank['nomrek_bank']; ?></b></p>
+                  <img id="myImg" src="<?php echo base_url($bank['photo_bank']) ?>" alt="<?php echo $bank['nama_bank'] ?>" style="width:100%;max-width:300px">
                 </div>
                 <div class="col-sm-6">
                 </div>

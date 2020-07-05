@@ -74,7 +74,7 @@
     <td><br/><br/><br/><br/></td>
     </tr>    
     <tr>
-        <td align="right">( <?php echo $this->session->userdata('username_admin');?> )</td>
+        <td align="right">(<?php echo $this->session->userdata('nama_admin');?>)</td>
     </tr>
     <tr>
         <td align="center"></td>
