@@ -190,12 +190,12 @@ class Tiket extends CI_Controller {
         $this->email->to($to);
         $this->email->subject($subject);
         $this->email->message($message);
-        if ($this->email->send()) {
+        //if ($this->email->send()) {
 			$this->session->set_flashdata('message', 'swal("Cek", "Email kamu untuk melakukan pembayaran", "success");');
             $this->load->view('frontend/checkout', $data);
-        } else {
-           echo 'Error! Kirim email error';
-        }
+        // } else {
+        //    echo 'Error! Kirim email error';
+        // }
 	}
 	public function caritiket(){
 		// die(print_r($POST));

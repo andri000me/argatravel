@@ -76,45 +76,6 @@ class Order extends CI_Controller {
 		}
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
 		redirect('backend/order');
-
-		
-	}
-	public function kirimemail($id=''){
-		$data['cetak'] = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_order ='".$id."'")->result_array();
-		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan WHERE kd_tujuan ='".$data['cetak']['asal_order']."'")->row_array();
-		$pelanggan = $this->db->query("SELECT email_pelanggan FROM tbl_pelanggan WHERE kd_pelanggan ='".$data['cetak'][0]['kd_pelanggan']."'")->row_array();
-		//email
-		$subject = 'E-ticket - Order ID '.$id.' - '.date('dmY');
-		$message = $this->load->view('frontend/cetaktiket', $data, TRUE);
-		$attach  = base_url("assets/backend/upload/etiket/".$id.".pdf");
-		$to 	= $pelanggan['email_pelanggan'];
-		$config = array(
-			   'mailtype'  => 'html',
-               'charset'   => 'utf-8',
-               'protocol'  => 'smtp',
-               'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_user' => 'sancikob@gmail.com',    // Ganti dengan email gmail kamu
-               'smtp_pass' => 'tiketbusci3',      // Password gmail kamu
-               'smtp_port' => 465,
-               'crlf'      => "rn",
-               'newline'   => "rn"
-					 );
-        $this->load->library('email', $config);
-        $this->email->set_newline("\r\n");
-        $this->email->from('XTRANS');
-        $this->email->to($to);
-        $this->email->attach($attach);
-        $this->email->subject($subject);
-        $this->email->message($message);
-         // Tampilkan pesan sukses atau error
-        if ($this->email->send()) {
-        	$this->session->set_flashdata('message', 'swal("Berhasil", "E Tiket terkirim", "success");');
-			redirect('backend/order/vieworder/'.$id);
-        } else {
-            $this->session->set_flashdata('message', 'swal("Gagal", "E Tiket Gagal Di kirim Hubungi Team IT", "error");');
-			redirect('backend/order/vieworder/'.$id);
-        }
-
 	}
 
 }

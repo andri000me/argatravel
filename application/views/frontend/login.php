@@ -54,9 +54,7 @@
 									<button class="btn btn-primary btn-block">Masuk</button>
 								</form>
 								<div class="text-center">
-									<p><a class="d-block small mt-3" href="<?php echo base_url() ?>login/daftar">Daftar</a>									<a class="d-block small" href="<?php echo base_url() ?>login/lupapassword">Lupa Password</a>
-</p>
-									
+									<p><a class="d-block small mt-3" href="<?php echo base_url() ?>login/daftar">Daftar</a>									
 								</div>
 							</div>
 						</div>
