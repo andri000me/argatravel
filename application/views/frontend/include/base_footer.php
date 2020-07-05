@@ -1,7 +1,7 @@
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="col-lg-7  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h4 class="text-white">Tiket BUS</h4>
 								<p>
@@ -16,40 +16,18 @@
 									Arga Hutama
 								</p>
 								<p class="number">
-									(+62) 89 509 509 444
+									+62 89 509 509 444
 								</p>
-							</div>
-						</div>						
-						<div class="col-lg-5  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h4 class="text-white">Newsletter</h4>
-								<p>You can trust us. we only send  offers, not a single spam.</p>
-								<div class="d-flex flex-row" id="mc_embed_signup">
-										<form class="navbar-form" novalidate="true" action="" method="post">
-									    <div class="input-group add-on">
-									      	<input class="form-control" placeholder="Email address"  type="email">
-											<div style="position: absolute; left: -5000px;">
-												<input name="" tabindex="-1" value="" type="text">
-											</div>
-									      <div class="input-group-btn">
-									        <button class="genric-btn primary circle arrow"><span class="lnr lnr-arrow-right"></span></button>
-									      </div>
-									    </div>
-									      <div class="info mt-20"></div>									    
-									  </form>
-
-								</div>
-							</div>
-						</div>						
-					</div>
-					<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <p class="footer-text m-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Arga Hutama</p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<div class="footer-social d-flex align-items-center">
+								<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+								<div class="footer-social d-flex align-items-left">
 							<a href="facebook.com/argahut"><i class="fa fa-facebook"></i></a>
 							<a href="instagram.com/argahutama"><i class="fa fa-instagram"></i></a>
 						</div>
+							</div>
+						</div>											
+					</div>
+					<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+            			<p class="footer-text m-0">Copyright &copy;2020 Arga Hutama</p>
 					</div>
 				</div>
 			</footer>

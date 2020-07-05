@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/elements/fav.png">
+		<link rel="shortcut icon" href="assets/img/logobus.png">
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
@@ -22,28 +22,8 @@
 		<style type="text/css">
 		.combined {
 		-webkit-text-stroke: 1px black;
-		color: white;
-		text-shadow:
-		2px  2px 0 #000,
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px  1px 0 #000,
-		1px  1px 0 #000;
-		}
-		.border-black{
-		  color: blue;
-		  /*border white with light shadow*/
-		  text-shadow: 
-		     2px   0  0   #000, 
-		    -2px   0  0   #000, 
-		     0    2px 0   #000, 
-		     0   -2px 0   #000, 
-		     1px  1px 0   #000, 
-		    -1px -1px 0   #000, 
-		     1px -1px 0   #000, 
-		    -1px  1px 0   #000,
-		     1px  1px 5px #000;
-		}
+		color: white;}
+		
 		</style>
 		<?php $this->load->view('frontend/include/base_css'); ?>
 	</head>
@@ -55,13 +35,10 @@
 			<div class="container">
 				<div class="row fullscreen d-flex align-items-center justify-content-end">
 					<div class="banner-content col-lg-7 col-md-12">
-						<h4  class="combined">Jaminan Tiket Resmi</h4>
 							<h2 class="combined" >
-						Arga Travel dijamin resmi, pastikan Anda bisa pergi!				
+						ARGA TRAVEL<br>
+						Resmi, Murah, Mudah, dan Nyaman.<br><br>				
 							</h2>
-						<p class="border-black" >
-							Sekarang cari tiket bus semakin mudah, bisa pesan online di Arga Travel. Tak perlu repot ke terminal atau kantor agen, sekarang Anda bisa beli tiket dengan mudah. Booking Cepat dan Mudah. Bebas Pilih Kursi. Termurah Setiap Hari. Customer Service 24/7. Semua Kelas dan Rute.
-						</p>
 						<a href="<?php echo base_url() ?>tiket" class="primary-btn header-btn text-uppercase">Cari Tiket</a>
 					</div>
 				</div>
@@ -113,7 +90,7 @@
 			<div class="container">
 				<div class="row d-flex justify-content-center">
 					<div class="col-md-8 pb-40 header-text">
-						<h1>CARA PEMESANAN TIKET BIS</h1>
+						<h1>CARA PEMESANAN TIKET</h1>
 					</div>
 				</div>
 				<div class="row">
