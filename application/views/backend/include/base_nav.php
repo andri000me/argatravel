@@ -54,7 +54,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?php echo base_url('backend/pelanggan') ?>">List Pelanggan</a>
-                <a class="collapse-item" href="<?php echo base_url() ?>backend/admin">List Admin</a>
+                <a class="collapse-item" href="<?php echo base_url() ?>backend/admin">List User</a>
               </div>
             </div>
           </li>

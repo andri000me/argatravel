@@ -15,26 +15,20 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     <!-- Begin Page Content -->
     <div class="container-fluid">
-      <h1 class="h3 mb-2 text-gray-800">List Admin</h1>
+      <h1 class="h3 mb-2 text-gray-800">List User</h1>
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
-        <div class="card-header py-3">
-           <a href="<?php echo base_url('backend/admin/daftar') ?>" class="btn btn-primary pull-right" >
-          Tambah Akun Akses
-          </a>
-        </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Kode Admin</th>
+                  <th>Kode User</th>
                   <th>Nama</th>
                   <th>Username</th>
                   <th>Email</th>
                   <th>Level</th>
-                  <th>AKSI</th>
                 </tr>
               </thead>
               <tbody>
@@ -46,12 +40,11 @@
                     <td><?php echo $row['username_admin']; ?></td>
                     <td><?php echo $row['email_admin']; ?></td>
                     <td><?php if ($row['level_admin'] == '1') { ?>
-                      <p class="btn btn-primary">OWNER</p>
+                      <p class="btn btn-primary">Supervisor</p>
                     <?php }else{ ?>
                       <p class="btn btn-primary">Admin</p>
                     <?php } ?>
                     </td>
-                    <td><a href="<?php echo base_url('backend/home/viewadmin/'.$row['kd_admin']) ?>" class="btn btn btn-primary">View</a></td>
                   </tr>
                 <?php } ?>
             </tbody>

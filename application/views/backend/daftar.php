@@ -20,7 +20,7 @@
       <!-- Basic Card Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Tambah Jadwal</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Tambah User</h6>
         </div>
         <div class="card-body">
           <div class="card-body">
@@ -50,7 +50,7 @@
                 <div class="form-group">
                   <select class="form-control" name="level">
                     <option value="2">Adminstartor</option>
-                    <option value="1">Owner</option>
+                    <option value="1">Supervisor</option>
                   </select>
                 </div>
                  <?php echo form_error('password'),'<small class="text-danger pl-3">','</small>'; ?>

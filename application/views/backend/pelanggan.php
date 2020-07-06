@@ -32,7 +32,6 @@
                   <th>Alamat </th>
                   <th>Email</th>
                   <th>Telepon</th>
-                  <th>AKSI</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,7 +44,6 @@
                     <td><?php echo $row['alamat_pelanggan']; ?></td>
                     <td><?php echo $row['email_pelanggan']; ?></td>
                     <td><?php echo $row['telpon_pelanggan']; ?></td>
-                    <td><a href="<?php echo base_url('backend/home/viewpelanggan/'.$row['kd_pelanggan']) ?>" class="btn btn btn-primary">View</a></td>
                   </tr>
                 <?php } ?>
             </tbody>
