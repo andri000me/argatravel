@@ -20,8 +20,8 @@
 								</p>
 								<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 								<div class="footer-social d-flex align-items-left">
-							<a href="facebook.com/argahut"><i class="fa fa-facebook"></i></a>
-							<a href="instagram.com/argahutama"><i class="fa fa-instagram"></i></a>
+									<a href="https://facebook.com/argahut"><i class="fa fa-facebook"></i></a>
+									<a href="https://instagram.com/argahutama"><i class="fa fa-instagram"></i></a>
 						</div>
 							</div>
 						</div>											
