@@ -125,7 +125,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
             </div>
             <hr>
             <a class="btn btn-default" href="javascript:history.back()"> Kembali</a>
-            <button data-toggle="modal" data-target="#edit" class="btn btn-primary pull-rigth">Edit</button>
           </div>
       </div>
     </div>

@@ -17,7 +17,7 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
       <!-- Page Heading -->
-      <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+      <h1 class="h3 mb-4 text-gray-800">View Order</h1>
       <!-- Basic Card Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
