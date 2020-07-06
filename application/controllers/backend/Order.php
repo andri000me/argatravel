@@ -74,7 +74,7 @@ class Order extends CI_Controller {
 		// die(print_r($simpan));
 		$this->db->insert('tbl_tiket', $simpan);
 		}
-		$this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
+		// $this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
 		redirect('backend/order');
 	}
 

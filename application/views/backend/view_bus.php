@@ -117,8 +117,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                   <p>Nama BUS : <b> <?php echo $bus['nama_bus']?>]</b></p>
                   <p>Plat Bus: <b><?php echo strtoupper($bus['plat_bus']) ?></b></p>
                   <p>Kapasitas Kursi : <b><?php echo $bus['kapasitas_bus']; ?> Kursi</b></p>
-                  <p>Status Bus    : <b><?php echo $bus['status_bus'] ?></td>
-                  <?php if ($bus['status_bus'] == '1') { ?>
+                  <p>Status Bus    : <?php if ($bus['status_bus'] == '1') { ?>
                     <td class="btn-success"> Online</td> 
                     <?php } else { ?>
                     <td class="btn-danger">Offline</td>
@@ -130,7 +129,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
             </div>
             <hr>
             <a class="btn btn-default" href="javascript:history.back()"> Kembali</a>
-            <button data-toggle="modal" data-target="#edit" class="btn btn-primary pull-rigth">Edit</button>
           </div>
       </div>
     </div>

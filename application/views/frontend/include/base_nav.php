@@ -7,7 +7,7 @@
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li class="menu"><a href="<?php echo base_url() ?>">Home</a></li>
-			          <li><a href="<?php echo base_url() ?>tiket">Lokasi & Jadwal Tiket</a></li>
+			          <li><a href="<?php echo base_url() ?>tiket">Cari & Pesan Tiket</a></li>
 			          <li class="menu"><a href="<?php echo base_url() ?>tiket/cektiket">Cek Tiket</a></li>
 			          <?php if ($this->session->userdata('username')) { ?>
 				      	<li class="menu-has-children"><a href="">Hai, <?php echo $this->session->userdata('nama_lengkap'); ?></a>

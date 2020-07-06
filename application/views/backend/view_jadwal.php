@@ -119,7 +119,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                   <p>Tujuan  : <b><?php echo strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></p>
                   <p>Jam Berangkat    : <b><?php echo date('H:i',strtotime($jadwal['jam_berangkat_jadwal'])) ?></b></p>
                   <p>Jam Tiba : <b><?php echo date('H:i',strtotime($jadwal['jam_tiba_jadwal'])) ?></b></p>
-                  <p>Harga Jadwal : <b>Rp <?php echo $jadwal['harga_jadwal']; ?></b></p>
+                  <p>Harga : <b>Rp <?php echo $jadwal['harga_jadwal']; ?></b></p>
                 </div>
                 <div class="col-sm-6">
                 </div>
