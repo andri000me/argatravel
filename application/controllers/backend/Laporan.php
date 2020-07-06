@@ -28,10 +28,10 @@ class Laporan extends CI_Controller {
 		$data['mulai'] = $this->input->post('mulai');
 		$data['sampai'] = $this->input->post('sampai');
 		$data['laporan'] = $this->db->query("SELECT * FROM tbl_tiket WHERE (create_tgl_tiket BETWEEN '".$data['mulai']."' AND '".$data['sampai']."')")->result_array();
-		for ($i=0; $i < count($data['laporan']) ; $i++) { 
-			$total[$i] = $data['laporan'][$i]['harga_tiket'];
-		}
-		$data['total'] = array_sum($data);
+		// for ($i=0; $i < count($data['laporan']) ; $i++) { 
+		// 	$total[$i] = $data['laporan'][$i]['harga_tiket'];
+		// }
+		// $data['total'] = array_sum($data);
 		$this->load->view('backend/laporan/laporan_pertanggal', $data);		
 	}
 }
