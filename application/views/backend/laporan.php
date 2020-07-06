@@ -16,28 +16,21 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">DashBoard</h1>
+            <h1 class="h3 mb-4 text-gray-800">Laporan</h1>
             <table class="table table-bordered table-condensed" style="font-size:12px;" id="mydata">
                 <thead>
                     <tr>
                         <th style="text-align:center;width:40px;">No</th>
                         <th>Laporan</th>
-                        <th style="width:100px;text-align:center;">Aksi</th>
+                        <th style="width:150px;text-align:center;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="text-align:center;vertical-align:middle">1</td>
-                        <td style="vertical-align:middle;">Laporan Data Tiket Pertanggal</td>
-                        <td style="text-align:center;">
-                            <a class="btn btn-sm btn-default" href="#lap_jual_pertanggal" data-toggle="modal">Download PDF</a>
-                        </td>
-                    </tr>
-                    <tr>
                         <td style="text-align:center;vertical-align:middle">2</td>
-                        <td style="vertical-align:middle;">Laporan Data Tiket Perbulan</td>
+                        <td style="vertical-align:middle;">Download Excel Laporan Data Tiket Pertanggal</td>
                         <td style="text-align:center;">
-                            <a class="btn btn-sm btn-default" href="#lap_jual_perbulan" data-toggle="modal">Download PDF</a>
+                        <a class="btn btn-sm btn-default" href="#lap_jual_pertanggal" data-toggle="modal">Export Excel</a>
                         </td>
                     </tr>
                 </tbody>
@@ -79,7 +72,7 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
-                        <button class="btn btn-info"><span class="fa fa-print"></span> Cetak</button>
+                        <button class="btn btn-info"></span> Export Excel</button>
                     </div>
                 </form>
             </div>

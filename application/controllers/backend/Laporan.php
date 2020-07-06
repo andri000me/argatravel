@@ -1,11 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Laporan extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
 		$this->load->model('getkod_model');
+		// $this->load->model('model_laporan');
 		$this->getsecurity();
 		date_default_timezone_set("Asia/Jakarta");
 	}
@@ -30,16 +33,6 @@ class Laporan extends CI_Controller {
 		}
 		$data['total'] = array_sum($data);
 		$this->load->view('backend/laporan/laporan_pertanggal', $data);		
-	}
-	public function laporbulan($value=''){
-		$data['bulan'] = $this->input->post('bln');
-		// $data['laporan'] = $this->db->query("SELECT create_tgl_tiket,DATE_FORMAT(create_tgl_tiket,'%M %Y') AS bulan,DATE_FORMAT(create_tgl_tiket,'%d %M %Y') FROM tbl_tiket  WHERE DATE_FORMAT(jual_tanggal,'%M %Y')='$data['bulan']' ORDER BY kd_tiket DESC");
-		die(print_r($data));
-		// for ($i=0; $i < count($data['laporan']) ; $i++) { 
-		// 	$total[$i] = $data['laporan'][$i]['harga_tiket'];
-		// }
-		// $data['total'] = array_sum($total);
-		// $this->load->view('backend/laporan/laporan_pertanggal', $data);
 	}
 }
 

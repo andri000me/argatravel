@@ -1,93 +1,38 @@
-<html lang="en" moznomarginboxes mozdisallowselectionprint>
+<?php
+ $judulfile = 'Laporan Penjualan.xls';
+ //MOFIFIKASI HEADER HTTP MENJADI FILE XLS
+ header("Content-type: application/vnd-ms-excel");
+ header("Content-Disposition: attachment; filename=$judulfile");
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Laporan Data Tiket Pertanggal</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/laporan.css')?>"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EXPORT LAPORAN</title>
 </head>
-<body onload="window.print()" >
-<div id="laporan">
-<table align="center" style="width:900px; border-bottom:3px double;border-top:none;border-right:none;border-left:none;margin-top:5px;margin-bottom:20px;">
-<!--<tr>
-    <td><img src="<?php// echo base_url().'assets/img/kop_surat.png'?>"/></td>
-</tr>-->
-</table>
 
-<table border="0" align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:0px;">
-<tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN PENJUALAN TIKET</h4></center><br/></td>
-</tr>
-                       
-</table>
- 
-<table border="0" align="center" style="width:900px;border:none;">
-        <tr>
-            <th style="text-align:left"></th>
-        </tr>
-</table>
-<table border="1" align="center" style="width:900px;margin-bottom:20px;">
-<thead>
-<tr>
-<th colspan="11" style="text-align:left;">Laporan Dari Tanggal <?php echo $mulai ?> Sampai <?php echo $sampai ?> </th>
-</tr>
+<body>
+<th> Laporan Penjualan Tiket dari Tanggal <?php echo $mulai ?> Sampai <?php echo $sampai ?> </th>
+<th></th>
+ <table border="1" cellspacing="1" cellpadding="2" width="90%">
     <tr>
-        <th>No Tiket</th>
-        <th>No Order</th>
-        <th>Nama </th>
-        <th>Umur</th>
-        <th>Kursi</th>
-        <th>Harga Tiket</th>
+        <th width="5%" align="center">No. Tiket<</th>
+        <th width="20%" align="center">No. Order</th>
+        <th width="20%" align="center">Nama</th>
+        <th width="25%" align="center">Umur</th>
+        <th width="20%" align="center">No. Kursi</th>
+        <th width="20%" align="center">Harga Tiket</th>
     </tr>
-</thead>
-<tbody>
     <?php foreach ($laporan as $row) { ?>
     <tr>
-        <td style="text-align:center;"><?php echo $row['kd_tiket'];?></td>
-        <td style="padding-left:5px;"><?php echo $row['kd_order'];?></td>
-        <td style="text-align:center;"><?php echo $row['nama_tiket'];?></td>
-        <td style="text-align:center;"><?php echo $row['umur_tiket'];?></td>
-        <td style="text-align:center;"><?php echo $row['kursi_tiket'];?></td>
-        <td style="text-align:left;"><?php echo 'Rp '.number_format($row['harga_tiket']);?></td>
+         <td align="center"><?php echo $row['kd_tiket'];?></td>
+         <td><?php echo $row['kd_order'];?></td>
+         <td align="center"><?php echo $row['nama_tiket'];?></td>
+         <td><?php echo $row['umur_tiket'];?></td>
+         <td><?php echo $row['kursi_tiket'];?></td>
+         <td><?php echo 'Rp '.number_format($row['harga_tiket']);?></td>
+         <td><?php echo 'Rp '.number_format($total);?></b></td>
     </tr>
-    <?php } ?>
-</tbody>
-<tfoot>
-
-    <tr>
-        <td colspan="5" style="text-align:center;"><b>Total</b></td>
-        <td style="text-align:left;"><b><?php echo 'Rp '.number_format($total);?></b></td>
-    </tr>
-</tfoot>
+   <?php } ?>
 </table>
-<table align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:20px;">
-    <tr>
-        <td></td>
-</table>
-<table align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:20px;">
-    <tr>
-        <td align="right">Jakarta, <?php echo date('d-M-Y')?></td>
-    </tr>
-    <tr>
-        <td align="right"></td>
-    </tr>
-   
-    <tr>
-    <td><br/><br/><br/><br/></td>
-    </tr>    
-    <tr>
-        <td align="right">(<?php echo $this->session->userdata('nama_admin');?>)</td>
-    </tr>
-    <tr>
-        <td align="center"></td>
-    </tr>
-</table>
-<table align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:20px;">
-    <tr>
-        <th><br/><br/></th>
-    </tr>
-    <tr>
-        <th align="left"></th>
-    </tr>
-</table>
-</div>
 </body>
 </html>

@@ -86,9 +86,6 @@
 										<div class="col-md-6 col-8 mb-xs-10 rekening-text">
 											<p ><input type="hidden" name="" id="myInput" value="<?php echo $tiket[0]['nomrek_bank']; ?> an <?php echo $tiket[0]['nama_bank'] ?>"><h4 id="myInput"><?php echo number_format((float)($tiket[0]['nomrek_bank']),0,"-","-"); ?> an <?php echo $tiket[0]['nama_bank'] ?></h4></p>
 										</div>
-										<div class="col-md-3 copy-link">
-											<button onclick="myFunction()" class="btn">Salin No Rek</button>
-										</div>
 									</div>
 								</div>
 								<div class="col-12 medium-title regular-text mt-20">
