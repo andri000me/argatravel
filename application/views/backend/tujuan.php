@@ -77,7 +77,7 @@
       </button>
     </div>
     <div class="modal-body">
-      <form action="<?php echo base_url() ?>backend/home/tambahtujuan" method="post" >
+      <form action="<?php echo base_url() ?>backend/rute/tambahtujuan" method="post" >
         <div class="form-group">
           <div class="form-label-group">
             <input type="text" id="tujuan" name="tujuan" class="form-control" placeholder="Tujuan" required="required" autofocus="autofocus">

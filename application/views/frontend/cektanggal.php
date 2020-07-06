@@ -65,7 +65,7 @@
 										</select>
 										<!-- </div> -->
 									</div>
-									<a href="<?php echo base_url() ?>tiket" class="btn btn-primary pull-left">Kembali </a>
+									<a href="<?php echo base_url() ?>home" class="btn btn-primary pull-left">Kembali </a>
 									<button type="submit" class="btn btn-primary pull-right">Cari </button>
 								</form>
 							</div>
