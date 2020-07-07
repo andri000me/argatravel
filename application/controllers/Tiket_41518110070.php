@@ -116,7 +116,6 @@ class Tiket_41518110070 extends CI_Controller {
 		QRcode::png($getkode,'assets/frontend/upload/qrcode/'.$getkode.".png","Q", 8, 8);
 		$count = count($kursi);
 		$tanggal = hari_indo(date('N',strtotime($jambeli))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$jambeli.''))).', '.date('H:i',strtotime($jambeli));
-		 // die(print_r($tanggal));
 		for($i=0; $i<$count; $i++) {
 			$simpan = array(
 				'kd_order' => $getkode,
@@ -191,8 +190,8 @@ class Tiket_41518110070 extends CI_Controller {
         $this->email->subject($subject);
         $this->email->message($message);
         //if ($this->email->send()) {
-			$this->session->set_flashdata('message', 'swal("Cek", "Booking Success", "success");');
-            $this->load->view('frontend/checkout', $data);
+			//$this->session->set_flashdata('message', 'swal("Cek", "Booking Success", "success");');
+        $this->load->view('frontend/checkout', $data);
         // } else {
         //    echo 'Error! Kirim email error';
         // }

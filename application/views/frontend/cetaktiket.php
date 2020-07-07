@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>E-Tiket(<?php echo $cetak[0]['kd_order'];?>)</title>
+<title>E-Tiket Arga Travel(<?php echo $cetak[0]['kd_order'];?>)</title>
 
 <style type="text/css">
     * {
@@ -85,7 +85,7 @@
     <tr>
         <td valign="top"><img src="<?php echo base_url($cetak[0]['qrcode_order']) ?>" alt="" width="200"/></td>
         <td align="right">
-            <h1>E-TICKET</h1>
+            <h1>E-TICKET ARGA TRAVEL</h1>
             <pre>
                 <b><span style='font-size:15px'>Detail Pesanan </span></b>
                 </br>
@@ -94,7 +94,7 @@
                 Beli : <?php echo $cetak[0]['tgl_beli_order'];?></br>
                 Nama Pemesan : <?php echo $cetak[0]['nama_order'];?></br>
                 Jadwal : <?php echo hari_indo(date('N',strtotime($cetak[0]['tgl_berangkat_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$cetak[0]['tgl_berangkat_order'].'')));?><br>
-                Jam Berangkat : <?php echo date('H:i',strtotime($cetak[0]['jam_berangkat_jadwal'])).' Sampai '.date('H:i',strtotime($cetak[0]['jam_tiba_jadwal'])) ?>
+                Jam Berangkat : <?php echo date('H:i',strtotime($cetak[0]['jam_berangkat_jadwal']))?></br>
                 Berangkat Dari : <?php echo $asal['nama_terminal_tujuan'].'-'.strtoupper($asal['kota_tujuan']);?></br>
                 Tujuan Ke : <?php echo $cetak[0]['nama_terminal_tujuan'].' - '.strtoupper($cetak[0]['kota_tujuan']); ?>
             </pre>
@@ -116,10 +116,10 @@
       <?php foreach ($cetak as $row) { ?>
         <tr>
            <td scope="row"><?php echo $row['kd_tiket']; ?></td>
-           <td align="left"><?php echo $row['nama_kursi_order']; ?></td>
+           <td align="center"><?php echo $row['nama_kursi_order']; ?></td>
            <td align="center"><?php echo $row['umur_kursi_order']; ?>Tahun</td>
             <td align="center"><?php echo $row['no_kursi_order']; ?> </td>
-           <td align="left"><?php echo 'Rp '.number_format(($row['harga_jadwal'])).',-'; ?></td>
+           <td align="center"><?php echo 'Rp '.number_format(($row['harga_jadwal'])).',-'; ?></td>
         <tr>
         <?php } ?>
     </tbody>

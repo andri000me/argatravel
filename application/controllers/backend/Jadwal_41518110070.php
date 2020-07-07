@@ -87,6 +87,3 @@ class Jadwal_41518110070 extends CI_Controller {
 		redirect('backend/jadwal_41518110070/');
 	}
 }
-
-/* End of file Jadwal.php */
-/* Location: ./application/controllers/backend/Jadwal.php */

@@ -19,7 +19,6 @@ class Konfirmasi_41518110070 extends CI_Controller {
 	public function index(){
 	$data['title'] = "List Konfirmasi";
 	$data['konfirmasi'] = $this->db->query("SELECT * FROM tbl_konfirmasi_41518110070 group by kd_konfirmasi")->result_array();
-// die(print_r($data));
 	$this->load->view('backend/konfirmasi', $data);	
 	}
 	public function viewkonfirmasi($id=''){
@@ -30,7 +29,6 @@ class Konfirmasi_41518110070 extends CI_Controller {
 		redirect('backend/order_41518110070/vieworder/'.$id);
 	 }else{		
 		$data['konfirmasi'] = $sqlcek;
-	 	// die(print_r($sqlcek));
 	 	$this->load->view('backend/view_konfirmasi',$data);
 		}
 	}

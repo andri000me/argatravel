@@ -44,7 +44,7 @@
 										<input placeholder="Masukkan tanggal" type="text" class="form-control datepicker" name="tanggal" required="">
 									</div>
 									<div class="form-group">
-										<label for="exampleInputEmail1">Asal</label>
+										<label for="exampleInputEmail1">Asal (Saat Ini Baru Tersedia Pemberangkatan dari Jakarta)</label>
 										<!-- <div class="default-select" id="default-select"> -->
 										<select name="asal" class="form-control js-example-basic-single" required >
 											<option value="" selected disabled="">Pilih Asal</option>

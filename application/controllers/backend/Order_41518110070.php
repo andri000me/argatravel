@@ -18,17 +18,14 @@ class Order_41518110070 extends CI_Controller {
 	public function index(){
 		$data['title'] = "List Order";
  		$data['order'] = $this->db->query("SELECT * FROM tbl_order_41518110070 group by kd_order")->result_array();
-		// die(print_r($data));
 		$this->load->view('backend/order', $data);
 	}
 	public function vieworder($id=''){
-		// die(print_r($_GET));
 		$cek = $this->input->get('order').$id;
 	 	$sqlcek = $this->db->query("SELECT * FROM tbl_order_41518110070 LEFT JOIN tbl_jadwal_41518110070 on tbl_order_41518110070.kd_jadwal = tbl_jadwal_41518110070.kd_jadwal WHERE kd_order ='".$cek."'")->result_array();
 	 	if ($sqlcek) {
 	 		$data['tiket'] = $sqlcek;
 			$data['title'] = "View Order";
-			// die(print_r($sqlcek));
 			$this->load->view('backend/view_order',$data);
 	 	}else{
 	 		$this->session->set_flashdata('message', 'swal("Kosong", "Order Tidak Ada", "error");');
@@ -74,8 +71,8 @@ class Order_41518110070 extends CI_Controller {
 		// die(print_r($simpan));
 		$this->db->insert('tbl_tiket_41518110070', $simpan);
 		}
-		// $this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
-		redirect('backend/order_41518110070');
+	    $this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
+		// redirect('backend/order_41518110070');
 	}
 
 }

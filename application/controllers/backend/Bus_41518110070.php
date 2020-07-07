@@ -35,6 +35,3 @@ class Bus_41518110070 extends CI_Controller {
 	}
 
 }
-
-/* End of file Bus.php */
-/* Location: ./application/controllers/backend/Bus.php */
