@@ -7,13 +7,8 @@ class Grafik extends CI_Controller {
         $this->load->model('model_grafik');
     }
 
-     Public function index(){
-        $data['data_pasien'] = $this->model_grafik->graph();
-        $this->load->view('view_grafik_pasien',$data);
-    } // tutup fucntion
-
     Public function lihat_grafik(){
         $data['data_rawatinap'] = $this->model_grafik->graph_rawatinap();
-        $this->load->view('view_grafik_rawatinap',$data);
+        $this->load->view('backend/laporan/laporan_grafik',$data);
     } // tutup fucntion
 } // tutup controller
