@@ -26,7 +26,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-12">
-                <form action="<?php echo base_url()?>backend/jadwal/tambahjadwal" method="post">
+                <form action="<?php echo base_url()?>backend/jadwal_41518110070/tambahjadwal" method="post">
                   <div class="form-group">
                     <label class="">Asal</label>
                     <select class="form-control" name="asal" required>

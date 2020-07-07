@@ -52,7 +52,7 @@
                 <div class="modal-header">
                     <h3 class="modal-title" id="myModalLabel">Pilih Tanggal</h3>
                 </div>
-                <form class="form-horizontal" method="post" action="<?php echo base_url('backend/laporan/laportanggal') ?>" target="_blank">
+                <form class="form-horizontal" method="post" action="<?php echo base_url('backend/laporan_41518110070/laportanggal') ?>" target="_blank">
                     <div class="modal-body">
                         <div class="form-group">
                             <label class="control-label col-xs-3" > Dari Tanggal</label>
@@ -92,7 +92,7 @@
                 <div class="modal-header">
                     <h3 class="modal-title" id="myModalLabel">Pilih Bulan</h3>
                 </div>
-                <form class="form-horizontal" method="post" action="<?php echo base_url('backend/laporan/laporbulan') ?>" target="_blank">
+                <form class="form-horizontal" method="post" action="<?php echo base_url('backend/laporan_41518110070/laporbulan') ?>" target="_blank">
                     <div class="modal-body">
                         <div class="form-group">
                             <label class="control-label col-xs-3" >Bulan</label>

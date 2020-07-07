@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -14,7 +14,7 @@ class Admin extends CI_Controller {
 		$username = $this->session->userdata('level');
 		if ($username == '2') {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -24,6 +24,3 @@ class Admin extends CI_Controller {
 		$this->load->view('backend/admin', $data);
 	}
 }
-
-/* End of file Admin.php */
-/* Location: ./application/controllers/backend/Admin.php */

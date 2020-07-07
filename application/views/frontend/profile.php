@@ -61,7 +61,7 @@
 											<p class="card-text"><?php echo $profile['alamat_pelanggan']?></p>
 											<h5 class="card-title">Photo Profile</h5>
 											<p><img src="<?php echo base_url($profile['img_pelanggan'])?>" height="50" width="50" ></p>
-											<p><a href="<?php echo base_url('profile/changepassword/'.$profile['kd_pelanggan']) ?>" class="btn btn-primary">Ganti Password</a></p>
+											<p><a href="<?php echo base_url('profile_41518110070/changepassword/'.$profile['kd_pelanggan']) ?>" class="btn btn-primary">Ganti Password</a></p>
 											<p><button data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Edit Akun</button></p>
 										</div>
 									</div>
@@ -80,7 +80,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form action="<?php echo base_url('profile/editprofile') ?>" method="post" enctype="multipart/form-data">
+								<form action="<?php echo base_url('profile_41518110070/editprofile') ?>" method="post" enctype="multipart/form-data">
 									<div class="card-body">
 										<div class="row">
 											<div class="col-sm-14">

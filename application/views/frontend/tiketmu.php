@@ -38,12 +38,12 @@
 								<p>Nama : <?php echo $row['nama_order']; ?>
 								 <br>Tanggal Pesan : <?php echo $row['tgl_beli_order']; ?></br>
 									Status Pembayaran : <?php if ($row['status_order'] == '1') { ?>
-									<i class='btn-danger'>Belum bayar</i>
+									<i class='btn-danger'>Tunggu Verifikasi Admin</i>
 									<?php }else{ ?><i class='btn-success'>Lunas bayar</i>
 									<?php } ?>
 									<hr>
 									<?php if ($row['status_order'] == '1') { ?>
-									<a href="<?php echo base_url('tiket/payment/'.$row['kd_order']) ?>" class="btn btn-primary">Cek Pembayaran</a>
+									<a href="<?php echo base_url('tiket_41518110070/payment/'.$row['kd_order']) ?>" class="btn btn-primary">Cek Pembayaran</a>
 									<?php }else{ ?>
 									<a href="<?php echo base_url('assets/backend/upload/etiket/'.$row['kd_order'].'.pdf') ?>" class="btn btn-success pull-right" download>Cetak Tiket</a>
 									<?php } ?>

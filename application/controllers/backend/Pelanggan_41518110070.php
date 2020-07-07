@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pelanggan extends CI_Controller {
+class Pelanggan_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -13,7 +13,7 @@ class Pelanggan extends CI_Controller {
 		$username = $this->session->userdata('level');
 		if ($username == '2') {
 			$this->session->sess_destroy();
-			redirect('backend/home');
+			redirect('backend/home_41518110070');
 		}
 	}
 	public function index(){
@@ -24,6 +24,3 @@ class Pelanggan extends CI_Controller {
 	}
 
 }
-
-/* End of file Pelanggan.php */
-/* Location: ./application/controllers/backend/Pelanggan.php */

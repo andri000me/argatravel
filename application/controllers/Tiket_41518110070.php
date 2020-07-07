@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tiket extends CI_Controller {
+class Tiket_41518110070 extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -12,7 +12,7 @@ class Tiket extends CI_Controller {
 		$username = $this->session->userdata('username');
 		if (empty($username)) {
 			// $this->session->sess_destroy();
-			redirect('login');
+			redirect('login_41518110070');
 		}
 	}
 	public function index(){
@@ -41,7 +41,7 @@ class Tiket extends CI_Controller {
 		if (!empty($data['jadwal'])) {
 			if ($tujuan == $data['asal']['kota_tujuan']) {
 				$this->session->set_flashdata('message', 'swal("Cek", "Tujuan dan Asal tidak boleh sama", "error");');
-    			redirect('tiket');
+    			redirect('tiket_41518110070');
 			}else{
 				for ($i=0; $i < count($data['jadwal']); $i++) { 
 				$data['kursi'][$i] = $this->db->query("SELECT count(no_kursi_order) FROM 41518110070_tbl_order WHERE kd_jadwal = '".$data['jadwal'][$i]['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
@@ -51,7 +51,7 @@ class Tiket extends CI_Controller {
 			}
 		}else{
 			$this->session->set_flashdata('message', 'swal("Kosong", "Jadwal Tidak Ada", "error");');
-    		redirect('tiket');
+    		redirect('tiket_41518110070');
 		}
 	}
 	public function beforebeli($jadwal="",$asal='',$tanggal=''){
@@ -73,7 +73,7 @@ class Tiket extends CI_Controller {
 			// die(print_r($data));
 			$this->load->view('frontend/beli_step1',$data);
 		}else{ 
-			redirect('login/autlogin');
+			redirect('login_41518110070/autlogin');
 		}
 	}
 	public function afterbeli(){
@@ -88,7 +88,7 @@ class Tiket extends CI_Controller {
 		$this->load->view('frontend/beli_step2', $data);
 		}else{
 			$this->session->set_flashdata('message', 'swal("Kosong", "Pilih Kursi Anda", "error");');
-			redirect('tiket/beforebeli/'.$data['asal'].'/'.$data['kd_jadwal']);
+			redirect('tiket_41518110070/beforebeli/'.$data['asal'].'/'.$data['kd_jadwal']);
 		}
 	}
 	public function gettiket($value=''){
@@ -142,7 +142,7 @@ class Tiket extends CI_Controller {
 			// die(print_r($simpan));
 			$this->db->insert('41518110070_tbl_order', $simpan);
 		}
-		redirect('tiket/checkout/'.$getkode);
+		redirect('tiket_41518110070/checkout/'.$getkode);
 	}
 	public function cekorder($id=''){
 		$id = $this->input->post('kodetiket');
@@ -153,7 +153,7 @@ class Tiket extends CI_Controller {
 		$this->load->view('frontend/payment',$data);
 		}else{
 			$this->session->set_flashdata('message', 'swal("Kosong", "Tiket Order Tidak Ada", "error");');
-    		redirect('tiket/cektiket');
+    		redirect('tiket_41518110070/cektiket');
 		}
 		// $this->sendmail($sqlcek);
 	}
@@ -171,7 +171,7 @@ class Tiket extends CI_Controller {
 		$send['count'] = $this->db->query("SELECT count(kd_order) FROM 41518110070_tbl_order WHERE kd_order ='".$value."'")->row_array();
 		$send['sendmail'] = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan LEFT JOIN 41518110070_tbl_bank on 41518110070_tbl_order.kd_bank = 41518110070_tbl_bank.kd_bank WHERE kd_order ='".$value."'")->row_array();
 		//email
-		$subject = 'XTRANS';
+		$subject = 'Arga Travel';
 		$message = $this->load->view('frontend/sendmail',$send, TRUE);
 		// die(print_r($send));
 		$to 	 = $this->session->userdata('email');
@@ -186,12 +186,12 @@ class Tiket extends CI_Controller {
 		   ];
         $this->load->library('email', $config);
         $this->email->set_newline("\r\n");
-        $this->email->from('XTRANS');
+        $this->email->from('Arga Travel');
         $this->email->to($to);
         $this->email->subject($subject);
         $this->email->message($message);
         //if ($this->email->send()) {
-			$this->session->set_flashdata('message', 'swal("Cek", "Email kamu untuk melakukan pembayaran", "success");');
+			$this->session->set_flashdata('message', 'swal("Cek", "Booking Success", "success");');
             $this->load->view('frontend/checkout', $data);
         // } else {
         //    echo 'Error! Kirim email error';
@@ -203,7 +203,7 @@ class Tiket extends CI_Controller {
 		$sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN tbl_bus on 41518110070_tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal WHERE kd_order ='".$id."'")->result_array();
 		if ($sqlcek == NULL) {
 			$this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Tiket", "error");');
-    		redirect('tiket/cektiket');
+    		redirect('tiket_41518110070/cektiket');
 		}else{
 			$data['tiket'] = $sqlcek;
 			$this->load->view('frontend/payment', $data);
@@ -226,7 +226,7 @@ class Tiket extends CI_Controller {
 		if ( ! $this->upload->do_upload('userfile')){
 			$error = array('error' => $this->upload->display_errors());
 			$this->session->set_flashdata('message', 'swal("Gagal", "Cek Kembali Konfirmasi Anda", "error");');
-			redirect('tiket/konfirmasi/'.$this->input->post('kd_order').'/'.$this->input->post('total'));
+			redirect('tiket_41518110070/konfirmasi/'.$this->input->post('kd_order').'/'.$this->input->post('total'));
 		}
 		else{
 			$upload_data = $this->upload->data();
@@ -243,7 +243,7 @@ class Tiket extends CI_Controller {
 			// die(print_r($data));
 			$this->db->insert('41518110070_tbl_konfirmasi', $data);
 			$this->session->set_flashdata('message', 'swal("Berhasil", "Terima Kasih Atas Konfirmasinya", "success");');
-			redirect('profile/tiketsaya/'.$this->session->userdata('kd_pelanggan'));
+			redirect('profile_41518110070/tiketsaya/'.$this->session->userdata('kd_pelanggan'));
 		}
 	}
 	public function cetak($id=''){
@@ -256,6 +256,3 @@ class Tiket extends CI_Controller {
 	}
 
 }
-
-/* End of file Tiket.php */
-/* Location: ./application/controllers/Tiket.php */

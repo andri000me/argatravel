@@ -1,7 +1,7 @@
  <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Jadwal extends CI_Controller {
+class Jadwal_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->model('getkod_model');
@@ -14,7 +14,7 @@ class Jadwal extends CI_Controller {
 		$username = $this->session->userdata('username_admin');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -42,7 +42,7 @@ class Jadwal extends CI_Controller {
                WHERE kd_tujuan ='".$this->input->post('tujuan')."'")->row_array();
 			if ($asal == $tujuan['kd_tujuan']) {
 				$this->session->set_flashdata('message', 'swal("Berhasil", "Tujuan Jadwal Tidak Boleh Sama", "error");');
-			redirect('backend/jadwal');
+			redirect('backend/jadwal_41518110070');
 			}else{
 			$kode = $this->getkod_model->get_kodjad();
 			$simpan = array(
@@ -58,7 +58,7 @@ class Jadwal extends CI_Controller {
 			// die(print_r($simpan));
 			$this->db->insert('41518110070_tbl_jadwal', $simpan);
 			$this->session->set_flashdata('message', 'swal("Berhasil", "Data Jadwal Di Simpan", "success");');
-			redirect('backend/jadwal');
+			redirect('backend/jadwal_41518110070');
 			}
 			
 		}
@@ -75,7 +75,7 @@ class Jadwal extends CI_Controller {
 			$this->load->view('backend/view_jadwal',$data);
 	 	}else{
 	 		$this->session->set_flashdata('message', 'swal("Gagal", "Data Jadwal Di Simpan", "error");');
-			redirect('backend/jadwal');
+			redirect('backend/jadwal_41518110070');
 	 	}
 	}	
 	public function editharga($id=''){
@@ -84,7 +84,7 @@ class Jadwal extends CI_Controller {
 		$update = array('harga_jadwal' =>  $this->input->post('harga'));
 		$this->db->update('41518110070_tbl_jadwal', $update,$where);
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
-		redirect('backend/jadwal/viewjadwal/');
+		redirect('backend/jadwal_41518110070/viewjadwal/');
 	}
 }
 

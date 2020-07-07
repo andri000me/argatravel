@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login_41518110070 extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->library('form_validation');
@@ -11,11 +11,11 @@ class Login extends CI_Controller {
 	function getsecurity($value=''){
 		$username = $this->session->userdata('username');
 		if ($username) {
-			redirect('backend/home');
+			redirect('backend/home_41518110070');
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}else{
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	function getUserIP()
@@ -48,7 +48,7 @@ class Login extends CI_Controller {
 	}
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('backend/login'));
+		redirect(base_url('backend/login_41518110070'));
 	}
 	public function cekuser(){
     $username = strtolower($this->input->post('username'));
@@ -72,15 +72,12 @@ class Login extends CI_Controller {
                 );
                 // die(print_r($sess));
                 $this->session->set_userdata($sess);
-                redirect('backend/home');
+                redirect('backend/home_41518110070');
             }
     }else{
     	$this->session->set_flashdata('message', 'swal("Gagal", "Email/Password Salah", "error");');
-    	redirect('backend/login');
+    	redirect('backend/login_41518110070');
     	}
 	}
 
 }
-
-/* End of file Login.php */
-/* Location: ./application/controllers/backend/Login.php */

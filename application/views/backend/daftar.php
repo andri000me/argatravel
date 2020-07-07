@@ -26,7 +26,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-12">
-                <form class="user" method="post" action="<?php echo base_url('backend/login/daftar') ?>">
+                <form class="user" method="post" action="<?php echo base_url('backend/login_41518110070/daftar') ?>">
                 <div class="form-group">
                     <input type="text" class="form-control form-control-user" id="exampleFirstName" name="name" value="<?php echo set_value('name') ?>" placeholder="Full Name">
                     <?php echo form_error('name'),'<small class="text-danger pl-3">','</small>'; ?>

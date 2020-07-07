@@ -39,7 +39,7 @@
 						ARGA TRAVEL<br>
 						Resmi, Murah, Mudah, dan Nyaman.<br><br>				
 							</h2>
-						<a href="<?php echo base_url() ?>tiket" class="primary-btn header-btn text-uppercase">Cari & Pesan Tiket</a>
+						<a href="<?php echo base_url() ?>tiket_41518110070" class="primary-btn header-btn text-uppercase">Cari & Pesan Tiket</a>
 					</div>
 				</div>
 			</div>

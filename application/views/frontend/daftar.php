@@ -34,7 +34,7 @@
 								<i class="fa fa-address-card-o"></i> Daftar
 							</div>
 							<div class="card-body">
-								<form action="<?php echo base_url() ?>login/daftar" method="post">
+								<form action="<?php echo base_url() ?>login_41518110070/daftar" method="post">
 									<div class="form-group">
 										<div class="form-group">
 											<div class="form-label-group">

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Konfirmasi extends CI_Controller {
+class Konfirmasi_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -13,7 +13,7 @@ class Konfirmasi extends CI_Controller {
 		$username = $this->session->userdata('username_admin');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -27,7 +27,7 @@ class Konfirmasi extends CI_Controller {
 	 $data['title'] = "View Konfirmasi";
 	 if ($sqlcek == NULL) {
 	 	$this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Kiriman Konfirmasi", "error");');
-		redirect('backend/order/vieworder/'.$id);
+		redirect('backend/order_41518110070/vieworder/'.$id);
 	 }else{		
 		$data['konfirmasi'] = $sqlcek;
 	 	// die(print_r($sqlcek));
@@ -35,6 +35,3 @@ class Konfirmasi extends CI_Controller {
 		}
 	}
 }
-
-/* End of file Konfirmasi.php */
-/* Location: ./application/controllers/backend/Konfirmasi.php */

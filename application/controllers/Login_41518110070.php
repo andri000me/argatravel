@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login_41518110070 extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->library('form_validation');
@@ -15,7 +15,7 @@ class Login extends CI_Controller {
 	}
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		redirect(base_url('login_41518110070'));
 	}
 	public function cekuser(){
 	$username = strtolower($this->input->post('username'));
@@ -41,28 +41,22 @@ class Login extends CI_Controller {
 		                }
 		                $this->session->set_userdata($sess);
 		                if ($this->session->userdata('jadwal') == NULL) {
-		                	redirect('tiket');
+		                	redirect('tiket_41518110070');
 		                }else{
-		                	redirect('tiket/beforebeli/'.$this->session->userdata('jadwal').'/'.$this->session->userdata('asal').'/'.$this->session->userdata('tanggal'));
+		                	redirect('tiket_41518110070/beforebeli/'.$this->session->userdata('jadwal').'/'.$this->session->userdata('asal').'/'.$this->session->userdata('tanggal'));
 		                }
             		}else{
             		$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
 					  Salah Password
 					</div>');
-				redirect('login');
+				redirect('login_41518110070');
             	}
-			
-			// }else{
-			// 	$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-			// 		  Username Belum verifikasi cek kembali email anda
-			// 		</div>');
-			// 	redirect('login');
-			// }
+
 		}else{
 			$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
 					  Username Tidak Terdaftar
 					</div>');
-    		redirect('login');
+    		redirect('login_41518110070');
 		}
 	
 	}
@@ -118,14 +112,14 @@ class Login extends CI_Controller {
 			// $this->db->insert('tbl_token_pelanggan', $data1);
 			// $this->_sendmail($token,'verify');
 			$this->session->set_flashdata('message', 'swal("Berhasil", "Pendaftaran Berhasil! Silahkan login kembali.", "success");');
-    		redirect('login');
+    		redirect('login_41518110070');
 		}
 
 	}
 	
 	public function changepassword($value=''){
 		if ($this->session->userdata('resetemail') == NULL) {
-			redirect('login/daftar');
+			redirect('login_41518110070/daftar');
 		}
 		$this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[8]|matches[password2]',array(
 			'matches' => 'Password Tidak Sama.',
@@ -139,15 +133,10 @@ class Login extends CI_Controller {
 			$update = array('password_pelanggan' => password_hash($this->input->post('password1'),PASSWORD_DEFAULT) );
 			$where = array('email_pelanggan' => $email );
 			$this->db->update('41518110070_tbl_pelanggan', $update,$where);
-			//$this->session->unset_userdata('resetemail');
-			//$this->db->delete('tbl_token_pelanggan',['email_token' => $email]);
 			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
 					Berhasil Reset, Login Kembali Akun Anda
 					</div>');
-			redirect('login');
+			redirect('login_41518110070');
 		}
 	}
 }
-
-/* End of file Login.php */
-/* Location: ./application/controllers/Login.php */

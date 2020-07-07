@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Bus extends CI_Controller {
+class Bus_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->model('getkod_model');
@@ -31,7 +31,7 @@ class Bus extends CI_Controller {
 		// die(print_r($data));
 		$this->db->insert('tbl_bus', $data);
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Bus Di Simpan", "success");');
-		redirect('backend/bus');
+		redirect('backend/bus_41518110070');
 	}
 
 }

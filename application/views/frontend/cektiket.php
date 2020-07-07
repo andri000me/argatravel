@@ -34,7 +34,7 @@
 					   <i class="fa fa-ticket"></i> Cari Tiket
 					  </div>
 					  <div class="card-body">
-					    <form action="<?php echo base_url() ?>tiket/cekorder" method="post">
+					    <form action="<?php echo base_url() ?>tiket_41518110070/cekorder" method="post">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Masukan Kode order</label>
 										<input type="text" id="" class="form-control" id="" name="kodetiket" placeholder="Kode Tiket" required="">

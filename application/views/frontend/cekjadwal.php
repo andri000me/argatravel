@@ -53,13 +53,13 @@
 											<td><?php echo hari_indo(date('N',strtotime($tanggal))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$tanggal.''))).', '.date('H:i',strtotime($jadwal[$i]['jam_berangkat_jadwal'])); ?></td>
 											<td><?php echo $jadwal[$i]['kapasitas_bus']-$kursi[$i][0]['count(no_kursi_order)'] ?></td>
 											<td>Rp <?php echo number_format((float)($jadwal[$i]['harga_jadwal']),0,",","."); ?>,-</td>
-											<td><a href="<?php echo base_url('tiket/beforebeli/').$jadwal[$i]['kd_jadwal'].'/'.$asal['kd_tujuan'].'/'.$tanggal ?>" class=" btn btn-primary">Pilih</a></td>
+											<td><a href="<?php echo base_url('tiket_41518110070/beforebeli/').$jadwal[$i]['kd_jadwal'].'/'.$asal['kd_tujuan'].'/'.$tanggal ?>" class=" btn btn-primary">Pilih</a></td>
 										</tr>
 										<?php } ?>
 									</tbody>
 								</table>
 								</div>
-								<a href="<?php echo base_url('tiket') ?>" class="btn btn-primary pull-left">Kembali </a>
+								<a href="<?php echo base_url('_41518110070') ?>" class="btn btn-primary pull-left">Kembali </a>
 									</div>
 								</div>
 							</div>

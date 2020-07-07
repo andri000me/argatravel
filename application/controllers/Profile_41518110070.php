@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Profile extends CI_Controller {
+class Profile_41518110070 extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		date_default_timezone_set("Asia/Jakarta");
@@ -27,7 +27,7 @@ class Profile extends CI_Controller {
 			 );
 		$this->db->update('41518110070_tbl_pelanggan', $update,$where);
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
-		redirect('profile/profilesaya/'.$id);
+		redirect('profile_41518110070/profilesaya/'.$id);
 	}
 	public function tiketsaya($id=''){
 		$this->getsecurity();
@@ -61,12 +61,12 @@ class Profile extends CI_Controller {
 				$this->session->set_flashdata('gagal', '<div class="alert alert-danger" role="alert">
 					  Password Sebelumnya Salah
 					</div>');
-				redirect('profile/changepassword');
+				redirect('profile_41518110070/changepassword');
 			}elseif ($currentpassword == $newpassword) {
 				$this->session->set_flashdata('gagal', '<div class="alert alert-danger" role="alert">
 					  Password Tidak Boleh Sama Sebelumnya
 					</div>');
-				redirect('profile/changepassword');
+				redirect('profile_41518110070/changepassword');
 			}else{
 				$password_hash = password_hash($newpassword, PASSWORD_DEFAULT);
 				$where = array('kd_pelanggan' => $id );
@@ -75,7 +75,7 @@ class Profile extends CI_Controller {
 				 );
 				$this->db->update('41518110070_tbl_pelanggan', $update,$where);
 				$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
-				redirect('profile/profilesaya/'.$id);
+				redirect('profile_41518110070/profilesaya/'.$id);
 			}
 		}
 
@@ -84,7 +84,7 @@ class Profile extends CI_Controller {
 		$username = $this->session->userdata('username');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 }

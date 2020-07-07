@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rute extends CI_Controller {
+class Rute_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -13,7 +13,7 @@ class Rute extends CI_Controller {
 		$username = $this->session->userdata('username_admin');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -38,9 +38,6 @@ class Rute extends CI_Controller {
 		// die(print_r($data));
 		$this->db->insert('41518110070_tbl_tujuan', $data);
 		// $this->session->set_flashdata('message', 'swal("Data Berhasil Di Tambah");');
-		redirect('backend/rute');
+		redirect('backend/rute_41518110070');
 	}
 }
-
-/* End of file Rute.php */
-/* Location: ./application/controllers/backend/Rute.php */

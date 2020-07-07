@@ -28,7 +28,7 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<!-- Default Card Example -->
-						<form action="<?php echo base_url() ?>tiket/gettiket/" method="post">
+						<form action="<?php echo base_url() ?>tiket_41518110070/gettiket/" method="post">
 						<input type="hidden" name="tgl" value="<?php echo $tglberangkat ?>">
 
 							<?php $i = 1; foreach ($kursi as $row ) { ?>
@@ -95,7 +95,7 @@
 													<i class="fa fa-usd"></i> Metode Pembayaran
 												</div>
 												<div class="card-body">
-													<form action="<?php echo base_url() ?>tiket/cektiketmu" method="post">
+													<form action="<?php echo base_url() ?>tiket_41518110070/cektiketmu" method="post">
 														<div class="form-group">
 															<label for="exampleInputEmail1">Pilih Bank </label>
 															<select class="form-control" name="bank" required>

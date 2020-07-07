@@ -46,7 +46,7 @@
                     <td><?php echo $row['nama_bank_konfirmasi']; ?></td>
                     <td><?php echo $row['norek_konfirmasi']; ?></td>
                     <td><?php echo $row['total_konfirmasi']; ?></td>
-                    <td><a href="<?php echo base_url('backend/konfirmasi/viewkonfirmasi/'.$row['kd_order']) ?>" class="btn btn btn-primary">View</a></td>
+                    <td><a href="<?php echo base_url('backend/konfirmasi_41518110070/viewkonfirmasi/'.$row['kd_order']) ?>" class="btn btn btn-primary">View</a></td>
                   </tr>
                 <?php } ?>
             </tbody>

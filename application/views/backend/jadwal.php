@@ -19,7 +19,7 @@
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <a href="<?php echo base_url('backend/jadwal/tambahjadwal') ?>" class="btn btn-primary pull-right" >
+          <a href="<?php echo base_url('backend/jadwal_41518110070/tambahjadwal') ?>" class="btn btn-primary pull-right" >
           Tambah Jadwal
           </a>
         </div>
@@ -48,7 +48,7 @@
                   <td><?php echo date('H:i',strtotime($row['jam_berangkat_jadwal'])); ?></td>
                   <td><?php echo date('H:i',strtotime($row['jam_tiba_jadwal'])); ?></td>
                   <td>Rp <?php echo number_format((float)($row['harga_jadwal']),0,",","."); ?>,-</td>
-                  <td><a href="<?php echo base_url('backend/jadwal/viewjadwal/'.$row['kd_jadwal']) ?>" class="btn btn-primary">VIEW</a></td>
+                  <td><a href="<?php echo base_url('backend/jadwal_41518110070/viewjadwal/'.$row['kd_jadwal']) ?>" class="btn btn-primary">VIEW</a></td>
                 </td>
               </tr>
               <?php } ?>

@@ -32,7 +32,7 @@
 							<div class="card-header">Ganti Password Anda <br> <?php echo $this->session->userdata('resetemail'); ?></div>
 							<div class="card-body" align="left">
 								<?php echo $this->session->flashdata('pesan'); ?>
-								 <form action="<?php echo base_url('login/changepassword') ?>" method="post" >
+								 <form action="<?php echo base_url('login_41518110070/changepassword') ?>" method="post" >
 				                    <div class="form-group">
 				                      <input type="password" class="form-control form-control-user" name="password1" placeholder="Password Baru">
 				                    <?php echo form_error('password1'),'<small class="text-danger pl-3">','</small>'; ?>

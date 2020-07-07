@@ -38,7 +38,7 @@
 									<p><b>PENTING!!</b></p>
 									<P>Sebelum Membeli Tiket Harap Baca terlebih Dahulu <b><i data-toggle="modal" data-target="#exampleModal" >Cara Pemesanan</i></b></P>
 								</div>
-								<form action="<?php echo base_url() ?>tiket/cekjadwal?>" method="get">
+								<form action="<?php echo base_url() ?>tiket_41518110070/cekjadwal?>" method="get">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Pilih Tanggal</label>
 										<input placeholder="Masukkan tanggal" type="text" class="form-control datepicker" name="tanggal" required="">

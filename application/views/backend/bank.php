@@ -39,7 +39,7 @@
                   <td><?php echo $row['nama_bank']; ?></td>
                   <td><?php echo $row['nomrek_bank']; ?></td>
                   <td><?php echo $row['nasabah_bank']; ?></td>
-                  <td align="center"><a href="<?php echo base_url('backend/bank/viewbank/'.$row['kd_bank']) ?>" class="btn btn btn-primary">View</a></a>
+                  <td align="center"><a href="<?php echo base_url('backend/bank_41518110070/viewbank/'.$row['kd_bank']) ?>" class="btn btn btn-primary">View</a></a>
                 </td>
               </tr>
               <?php } ?>
@@ -66,7 +66,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <form action="<?php echo base_url()?>backend/home/tambahbus" method="post">
+    <form action="<?php echo base_url()?>backend/home_41518110070/tambahbus" method="post">
       <div class="form-group">
         <label for="platbus" class="">Plat BUS</label>
         <input type="text" class="form-control" id="inputEmail3" name="kd_bus" placeholder="Plat Bus">

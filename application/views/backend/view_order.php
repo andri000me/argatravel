@@ -24,7 +24,7 @@
           <h6 class="m-0 font-weight-bold text-primary">KODE Order [<?php echo $tiket[0]['kd_order']; ?>]  </h6>
         </div>
         <div class="card-body">
-          <form action="<?php echo base_url().'backend/order/inserttiket' ?>" method="post" enctype="multipart/form-data">
+          <form action="<?php echo base_url().'backend/order_41518110070/inserttiket' ?>" method="post" enctype="multipart/form-data">
              
             <div class="card-body">
               <div class="row">
@@ -79,7 +79,7 @@
                   <div class="row form-group">
                     <label for="" class="col-sm-4 control-label">Cek Konfirmasi Pembayaran</label>
                     <div class="col-sm-8">
-                      <a href="<?php echo base_url('backend/konfirmasi/viewkonfirmasi/'.$tiket[0]['kd_order']) ?>" class="btn btn-secondary">Lihat</a>
+                      <a href="<?php echo base_url('backend/konfirmasi_41518110070/viewkonfirmasi/'.$tiket[0]['kd_order']) ?>" class="btn btn-secondary">Lihat</a>
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
                   </div>
                 </div>
               </div>
-              <hr><a class="btn btn-default" href="<?php echo base_url().'backend/order' ?>"> Kembali</a>
+              <hr><a class="btn btn-default" href="<?php echo base_url().'backend/order_41518110070' ?>"> Kembali</a>
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<?php if ($tiket[0]['status_order'] == '1') { ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-info">Proses</button>
             <?php }else{ ?>
               <a class="btn btn-success" href="<?php echo base_url('assets/backend/upload/etiket/'.$row['kd_order'].'.pdf') ?>"> Cetak Eticket</a>

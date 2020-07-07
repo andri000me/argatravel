@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Bank extends CI_Controller {
+class Bank_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -13,7 +13,7 @@ class Bank extends CI_Controller {
 		$username = $this->session->userdata('username_admin');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -30,6 +30,3 @@ class Bank extends CI_Controller {
 	}
 
 }
-
-/* End of file Bank.php */
-/* Location: ./application/controllers/backend/Bank.php */

@@ -176,7 +176,7 @@ span.onclick = function() {
 								</button>
 							</div>
 							<div class="modal-body">
-								<form action="<?php echo base_url('backend/jadwal/editharga') ?>" method="post" enctype="multipart/form-data">
+								<form action="<?php echo base_url('backend/jadwal_41518110070/editharga') ?>" method="post" enctype="multipart/form-data">
 									<div class="card-body">
 										<div class="row">
 											<div class="col-sm-14">

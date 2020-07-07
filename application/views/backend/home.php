@@ -34,7 +34,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><a href="<?php echo base_url('backend/order') ?>">Pending Order</a></div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><a href="<?php echo base_url('backend/order_41518110070') ?>">Pending Order</a></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $order[0]['count(kd_order)']; ?></div>
                     </div>
                     <div class="col-auto">
@@ -51,7 +51,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="<?php echo base_url('backend/tiket') ?>">Total Tiket terrjual</a></div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="<?php echo base_url('backend/tiket_41518110070') ?>">Total Tiket terrjual</a></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tiket[0]['count(kd_tiket)']; ?></div>
                     </div>
                     <div class="col-auto">
@@ -68,7 +68,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="<?php echo base_url('backend/konfirmasi') ?>">List Konfirmasi</a></div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="<?php echo base_url('backend/konfirmasi_41518110070') ?>">List Konfirmasi</a></div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $konfirmasi[0]['count(kd_konfirmasi)']; ?></div>

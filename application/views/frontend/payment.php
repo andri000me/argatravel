@@ -114,7 +114,7 @@
 										</div>
 									</div>
 								</div>
-								<a href="<?php echo base_url('tiket/konfirmasi/'.$tiket[0]['kd_order'].'/'.$total) ?>" class="btn btn-primary pull-center">Konfirmasi Pembayaran </a>
+								<a href="<?php echo base_url('tiket_41518110070/konfirmasi/'.$tiket[0]['kd_order'].'/'.$total) ?>" class="btn btn-primary pull-center">Konfirmasi Pembayaran </a>
 							</div>
 						</div>
 					</div>

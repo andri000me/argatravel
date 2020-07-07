@@ -52,7 +52,7 @@
                           <?php } elseif($row['status_order'] == '2') { ?>
                           <td class="btn-success"> Sudah Bayar</td>
                         <?php } ?>
-                    <td><a href="<?php echo base_url('backend/order/vieworder/'.$row['kd_order']) ?>" class="btn btn btn-primary">View</a></td>
+                    <td><a href="<?php echo base_url('backend/order_41518110070/vieworder/'.$row['kd_order']) ?>" class="btn btn btn-primary">View</a></td>
                   </tr>
                 <?php } ?>
             </tbody>

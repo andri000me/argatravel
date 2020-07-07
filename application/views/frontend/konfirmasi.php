@@ -34,7 +34,7 @@
 					    Konfirmasi Pembayaran
 					  </div>
 					  <div class="card-body">
-					    <form action="<?php echo base_url() ?>tiket/insertkonfirmasi" method="post" enctype="multipart/form-data">
+					    <form action="<?php echo base_url() ?>tiket_41518110070/insertkonfirmasi" method="post" enctype="multipart/form-data">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Kode Order</label>
 										<input type="text" id="" class="form-control" id="" name="kd_order" value="<?php echo $id ?>" placeholder="Kode Tiket">

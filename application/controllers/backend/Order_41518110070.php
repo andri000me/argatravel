@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Order extends CI_Controller {
+class Order_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -12,7 +12,7 @@ class Order extends CI_Controller {
 	function getsecurity($value=''){
 		if (empty($this->session->userdata('username_admin'))) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -32,7 +32,7 @@ class Order extends CI_Controller {
 			$this->load->view('backend/view_order',$data);
 	 	}else{
 	 		$this->session->set_flashdata('message', 'swal("Kosong", "Order Tidak Ada", "error");');
-    		redirect('backend/tiket');
+    		redirect('backend/tiket_41518110070');
 	 	}
 	}
 	public function inserttiket($value=''){
@@ -75,10 +75,7 @@ class Order extends CI_Controller {
 		$this->db->insert('41518110070_tbl_tiket', $simpan);
 		}
 		// $this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
-		redirect('backend/order');
+		redirect('backend/order_41518110070');
 	}
 
 }
-
-/* End of file Order.php */
-/* Location: ./application/controllers/backend/Order.php */

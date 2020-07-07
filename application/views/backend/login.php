@@ -39,7 +39,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login Arga Travel</h1>
                   </div>
-                  <form class="user" method="post" action="<?php echo base_url('backend/login/cekuser') ?>">
+                  <form class="user" method="post" action="<?php echo base_url('backend/login_41518110070/cekuser') ?>">
                     <div class="form-group">
                       <input required="" type="text" class="form-control form-control-user" name="username" aria-describedby="emailHelp" placeholder="Username...">
                     </div>

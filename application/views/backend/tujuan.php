@@ -42,7 +42,7 @@
                   <td><?php echo $row['kd_tujuan']; ?></td>
                   <td><?php echo strtoupper($row['kota_tujuan']); ?></td>
                   <td><?php echo  substr($row['terminal_tujuan'], 0, 15); ?></td>
-                  <td align="center"><a href="<?php echo base_url('backend/rute/viewrute/'.$row['kd_tujuan']) ?>" class="btn btn-primary">VIEW</a></td>
+                  <td align="center"><a href="<?php echo base_url('backend/rute_41518110070/viewrute/'.$row['kd_tujuan']) ?>" class="btn btn-primary">VIEW</a></td>
                 </tr>
                 <?php } ?>
               </tbody>
@@ -77,7 +77,7 @@
       </button>
     </div>
     <div class="modal-body">
-      <form action="<?php echo base_url() ?>backend/rute/tambahtujuan" method="post" >
+      <form action="<?php echo base_url() ?>backend/rute_41518110070/tambahtujuan" method="post" >
         <div class="form-group">
           <div class="form-label-group">
             <input type="text" id="tujuan" name="tujuan" class="form-control" placeholder="Tujuan" required="required" autofocus="autofocus">

@@ -45,7 +45,7 @@
 									<i class="fa fa-key"></i> Password
 								</div>
 								<div class="card-body">
-									<form ction="<?php echo base_url('profile/changepassword') ?>" method="post">
+									<form ction="<?php echo base_url('profile_41518110070/changepassword') ?>" method="post">
 									 <?php echo $this->session->flashdata('gagal'); ?>
 									  <div class="form-group">
 									  	<div class="form-label-group">
@@ -65,7 +65,7 @@
 									    <input type="password" class="form-control" required="" name="new_password2" placeholder="Ulangi Password">
 										</div>
 									  </div>
-									<a class="btn btn-secondary" href="<?php echo base_url() ?>profile/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">Kembali</a>
+									<a class="btn btn-secondary" href="<?php echo base_url() ?>profile_41518110070/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">Kembali</a>
 									<button type="submit" class="btn btn-primary pull-right" >Ganti Password</button>
 									</form>
 								</div>

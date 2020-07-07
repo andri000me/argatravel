@@ -52,7 +52,7 @@
 						</div>
 					</div>
 					<div class="col-lg-4">
-						<form action="<?php echo base_url('tiket/afterbeli') ?>" method="get">
+						<form action="<?php echo base_url('tiket_41518110070/afterbeli') ?>" method="get">
 							<input type="hidden" name="tgl" value="<?php echo $tanggal ?>">
 							<!-- Default Card Example -->
 							<div class="card mb-5" >
@@ -183,7 +183,7 @@
 													<div class="alert alert-primary" role="alert">
 														<p>Setelah memilih kursi, silahkan klik tombol 'selanjutnya' dibawah ini !</p>
 														<div class='btn-group'>
-															<a href="<?php echo base_url('tiket/cekjadwal/'.$tanggal.'/'.$asal['kd_tujuan'].'/'.$jadwal['kota_tujuan']) ?>" class='btn btn-default'>Kembali</a>
+															<a href="<?php echo base_url('tiket_41518110070/cekjadwal/'.$tanggal.'/'.$asal['kd_tujuan'].'/'.$jadwal['kota_tujuan']) ?>" class='btn btn-default'>Kembali</a>
 															<input class="btn btn-primary pull-right" disabled="disabled" type="submit" value="Selanjutnya">
 															
 														</div>

@@ -50,7 +50,7 @@
                     <?php } else { ?>
                     <td class="btn-danger">Offline</td>
                   <?php } ?>
-                  <td align="center"><a href="<?php echo base_url('backend/bus/viewbus/'.$row['kd_bus'])?>" class="btn btn btn-primary">View</a></a>
+                  <td align="center"><a href="<?php echo base_url('backend/bus_41518110070/viewbus/'.$row['kd_bus'])?>" class="btn btn btn-primary">View</a></a>
                 </td>
               </tr>
               <?php } ?>
@@ -78,7 +78,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <form action="<?php echo base_url()?>backend/bus/tambahbus" method="post">
+    <form action="<?php echo base_url()?>backend/bus_41518110070/tambahbus" method="post">
       <div class="form-group">
         <label for="platbus" class="">Nama BUS</label>
         <input type="text" class="form-control" name="nama_bus" placeholder="Plat Bus">

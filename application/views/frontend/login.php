@@ -32,7 +32,7 @@
 							<div class="card-header">Login</div>
 							<div class="card-body" align="left">
 								<?php echo $this->session->flashdata('pesan'); ?>
-								<form action="<?php echo base_url() ?>login/cekuser" method="post">
+								<form action="<?php echo base_url() ?>login_41518110070/cekuser" method="post">
 									<div class="form-group">
 										<div class="form-label-group">
 											<input type="text" id="username" name="username" class="form-control" placeholder="username" required="required" autofocus="autofocus">
@@ -54,7 +54,7 @@
 									<button class="btn btn-primary btn-block">Masuk</button>
 								</form>
 								<div class="text-center">
-									<p><a class="d-block small mt-3" href="<?php echo base_url() ?>login/daftar">Daftar</a>									
+									<p><a class="d-block small mt-3" href="<?php echo base_url() ?>login_41518110070/daftar">Daftar</a>									
 								</div>
 							</div>
 						</div>

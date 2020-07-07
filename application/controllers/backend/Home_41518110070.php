@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home_41518110070 extends CI_Controller {
 	
 	function __construct(){
 	parent::__construct();
@@ -22,10 +22,7 @@ class Home extends CI_Controller {
 		$username = $this->session->userdata('username_admin');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 }
-
-/* End of file Home.php */
-/* Location: ./application/controllers/backend/Home.php */

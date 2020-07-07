@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tiket extends CI_Controller {
+class Tiket_41518110070 extends CI_Controller {
 	function __construct(){
 	parent::__construct();
 		$this->load->helper('tglindo_helper');
@@ -13,7 +13,7 @@ class Tiket extends CI_Controller {
 		$username = $this->session->userdata('username_admin');
 		if (empty($username)) {
 			$this->session->sess_destroy();
-			redirect('backend/login');
+			redirect('backend/login_41518110070');
 		}
 	}
 	public function index(){
@@ -29,11 +29,8 @@ class Tiket extends CI_Controller {
 			$this->load->view('backend/view_tiket', $data);
 		}else{
 			$this->session->set_flashdata('message', 'swal("Kosong", "Tiket Tidak Ada", "error");');
-    		redirect('backend/tiket');
+    		redirect('backend/tiket_41518110070');
 		}	
 	}
 
 }
-
-/* End of file Tiket.php */
-/* Location: ./application/controllers/backend/Tiket.php */
