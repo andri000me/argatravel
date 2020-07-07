@@ -41,7 +41,7 @@
                   <td><?php echo $i++; ?></td>
                   <td><?php echo $row['kd_tujuan']; ?></td>
                   <td><?php echo strtoupper($row['kota_tujuan']); ?></td>
-                  <td><?php echo  substr($row['terminal_tujuan'], 0, 15); ?></td>
+                  <td><?php echo  substr($row['terminal_tujuan'], 0, 90); ?></td>
                   <td align="center"><a href="<?php echo base_url('backend/rute_41518110070/viewrute/'.$row['kd_tujuan']) ?>" class="btn btn-primary">VIEW</a></td>
                 </tr>
                 <?php } ?>
