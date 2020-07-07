@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2020 at 08:07 PM
+-- Generation Time: Jul 07, 2020 at 08:54 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -20,30 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_argatravel_41518110070`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_access_menu_41518110070`
---
-
-CREATE TABLE `tbl_access_menu_41518110070` (
-  `kd_access_menu` int(11) DEFAULT NULL,
-  `kd_level` int(11) DEFAULT NULL,
-  `kd_menu` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_access_menu_41518110070`
---
-
-INSERT INTO `tbl_access_menu_41518110070` (`kd_access_menu`, `kd_level`, `kd_menu`) VALUES
-(1, 1, 1),
-(2, 1, 2),
-(3, 2, 2),
-(1, 1, 1),
-(2, 1, 2),
-(3, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -144,13 +120,13 @@ CREATE TABLE `tbl_jadwal_41518110070` (
 --
 
 INSERT INTO `tbl_jadwal_41518110070` (`kd_jadwal`, `kd_bus`, `kd_tujuan`, `kd_asal`, `wilayah_jadwal`, `jam_berangkat_jadwal`, `jam_tiba_jadwal`, `harga_jadwal`) VALUES
-('J0001', 'B003', 'TJ001', 'TJ008', 'Surabaya', '07:00:00', '10:30:00', '112000'),
-('J0002', 'B004', 'TJ002', 'TJ008', 'Bandung', '12:00:00', '15:45:00', '123000'),
-('J0003', 'B005', 'TJ003', 'TJ008', 'Yogyakarta', '16:00:00', '19:00:00', '134000'),
-('J0004', 'B001', 'TJ004', 'TJ008', 'Semarang', '07:30:00', '10:00:00', '145000'),
-('J0005', 'B002', 'TJ005', 'TJ008', 'Malang', '11:00:00', '03:00:00', '132000'),
-('J0006', 'B006', 'TJ006', 'TJ008', 'Palembang', '17:00:00', '20:00:00', '128000'),
-('J0007', 'B008', 'TJ007', 'TJ008', 'Medan', '02:18:00', '18:18:00', '180000');
+('J0001', 'B003', 'TJ001', 'TJ008', 'Surabaya', '07:00:00', '10:30:00', '300000'),
+('J0002', 'B004', 'TJ002', 'TJ008', 'Bandung', '12:00:00', '15:45:00', '120000'),
+('J0003', 'B005', 'TJ003', 'TJ008', 'Yogyakarta', '16:00:00', '19:00:00', '250000'),
+('J0004', 'B001', 'TJ004', 'TJ008', 'Semarang', '07:30:00', '10:00:00', '220000'),
+('J0005', 'B002', 'TJ005', 'TJ008', 'Malang', '11:00:00', '03:00:00', '330000'),
+('J0006', 'B006', 'TJ006', 'TJ008', 'Palembang', '17:00:00', '20:00:00', '250000'),
+('J0007', 'B008', 'TJ007', 'TJ008', 'Medan', '02:18:00', '18:18:00', '400000');
 
 -- --------------------------------------------------------
 
@@ -167,6 +143,13 @@ CREATE TABLE `tbl_konfirmasi_41518110070` (
   `total_konfirmasi` varchar(50) DEFAULT NULL,
   `photo_konfirmasi` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_konfirmasi_41518110070`
+--
+
+INSERT INTO `tbl_konfirmasi_41518110070` (`kd_konfirmasi`, `kd_order`, `nama_konfirmasi`, `nama_bank_konfirmasi`, `norek_konfirmasi`, `total_konfirmasi`, `photo_konfirmasi`) VALUES
+('KF0001', 'ORD00002', 'Arga Hutama', 'Mandiri', '12', '128000', '/assets/frontend/upload/payment/ace.png');
 
 -- --------------------------------------------------------
 
@@ -240,7 +223,8 @@ CREATE TABLE `tbl_order_41518110070` (
 --
 
 INSERT INTO `tbl_order_41518110070` (`id_order`, `kd_order`, `kd_tiket`, `kd_jadwal`, `kd_pelanggan`, `kd_bank`, `asal_order`, `nama_order`, `tgl_beli_order`, `tgl_berangkat_order`, `nama_kursi_order`, `umur_kursi_order`, `no_kursi_order`, `no_ktp_order`, `no_tlpn_order`, `alamat_order`, `email_order`, `expired_order`, `qrcode_order`, `status_order`) VALUES
-(33, 'ORD00001', 'TORD00001J0003202007113', 'J0003', 'PL0008', 'BNK0004', 'TJ008', 'Arga Hutama', 'Rabu, 08 Juli 2020, 00:36', '2020-07-11', 'Arga Hutama', '23', '3', '213', '023333333', 'Jalan Jalan yuk', 'argahuts@gmail.com', '09-07-2020 00:36:37', 'assets/frontend/upload/qrcode/ORD00001.png', '2');
+(33, 'ORD00001', 'TORD00001J0003202007113', 'J0003', 'PL0008', 'BNK0004', 'TJ008', 'Arga Hutama', 'Rabu, 08 Juli 2020, 00:36', '2020-07-11', 'Arga Hutama', '23', '3', '213', '023333333', 'Jalan Jalan yuk', 'argahuts@gmail.com', '09-07-2020 00:36:37', 'assets/frontend/upload/qrcode/ORD00001.png', '2'),
+(34, 'ORD00002', 'TORD00002202007097', 'J0006', 'PL0008', 'BNK0002', 'TJ008', 'Arga Hutama', 'Rabu, 08 Juli 2020, 01:39', '2020-07-09', 'Kocheng Oren', '14', '7', '56', '023333333', 'Jalan Jalan yuk', 'argahuts@gmail.com', '09-07-2020 01:39:06', 'assets/frontend/upload/qrcode/ORD00002.png', '2');
 
 -- --------------------------------------------------------
 
@@ -297,7 +281,8 @@ CREATE TABLE `tbl_tiket_41518110070` (
 --
 
 INSERT INTO `tbl_tiket_41518110070` (`kd_tiket`, `kd_order`, `nama_tiket`, `kursi_tiket`, `umur_tiket`, `asal_beli_tiket`, `harga_tiket`, `etiket_tiket`, `status_tiket`, `create_tgl_tiket`, `create_admin_tiket`) VALUES
-('TORD00001J0003202007113', 'ORD00001', 'Arga Hutama', '3', '23 Tahun', 'TJ008', '134000', 'assets/backend/upload/etiket/ORD00001.pdf', '2', '2020-07-08', 'supervisor');
+('TORD00001J0003202007113', 'ORD00001', 'Arga Hutama', '3', '23 Tahun', 'TJ008', '134000', 'assets/backend/upload/etiket/ORD00001.pdf', '2', '2020-07-08', 'supervisor'),
+('TORD00002202007097', 'ORD00002', 'Kocheng Oren', '7', '14 Tahun', 'TJ008', '128000', 'assets/backend/upload/etiket/ORD00002.pdf', '2', '2020-07-08', 'supervisor');
 
 -- --------------------------------------------------------
 
@@ -424,7 +409,7 @@ ALTER TABLE `tbl_menu_41518110070`
 -- AUTO_INCREMENT for table `tbl_order_41518110070`
 --
 ALTER TABLE `tbl_order_41518110070`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
