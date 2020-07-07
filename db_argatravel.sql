@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2020 at 09:51 PM
+-- Generation Time: Jul 07, 2020 at 04:44 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -144,13 +144,13 @@ CREATE TABLE `tbl_jadwal` (
 --
 
 INSERT INTO `tbl_jadwal` (`kd_jadwal`, `kd_bus`, `kd_tujuan`, `kd_asal`, `wilayah_jadwal`, `jam_berangkat_jadwal`, `jam_tiba_jadwal`, `harga_jadwal`) VALUES
-('J0001', 'B003', 'TJ002', 'TJ001', 'bandung', '07:00:00', '10:30:00', '112500'),
-('J0002', 'B004', 'TJ005', 'TJ003', 'bandung', '12:00:00', '15:45:00', '123000'),
-('J0003', 'B005', 'TJ006', 'TJ004', 'bandung', '16:00:00', '19:00:00', '134000'),
-('J0004', 'B001', 'TJ001', 'TJ002', 'jakarta', '07:30:00', '10:00:00', '145000'),
-('J0005', 'B002', 'TJ003', 'TJ005', 'jakarta', '11:00:00', '03:00:00', '132000'),
-('J0006', 'B006', 'TJ004', 'TJ006', 'jakarta', '17:00:00', '20:00:00', '128000'),
-('J0007', 'B003', 'TJ001', 'TJ002', 'jakarta', '02:18:00', '18:18:00', '180000');
+('J0001', 'B003', 'TJ001', 'TJ008', 'Surabaya', '07:00:00', '10:30:00', '112500'),
+('J0002', 'B004', 'TJ002', 'TJ008', 'Bandung', '12:00:00', '15:45:00', '123000'),
+('J0003', 'B005', 'TJ003', 'TJ008', 'Yogyakarta', '16:00:00', '19:00:00', '134000'),
+('J0004', 'B001', 'TJ004', 'TJ008', 'Semarang', '07:30:00', '10:00:00', '145000'),
+('J0005', 'B002', 'TJ005', 'TJ008', 'Malang', '11:00:00', '03:00:00', '132000'),
+('J0006', 'B006', 'TJ006', 'TJ008', 'Palembang', '17:00:00', '20:00:00', '128000'),
+('J0007', 'B008', 'TJ007', 'TJ008', 'Medan', '02:18:00', '18:18:00', '180000');
 
 -- --------------------------------------------------------
 
@@ -260,9 +260,9 @@ INSERT INTO `tbl_order` (`id_order`, `kd_order`, `kd_tiket`, `kd_jadwal`, `kd_pe
 (23, 'ORD00009', 'TORD00009J0001202007099', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Buwung Puyuh', '2', '9', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:21', 'assets/frontend/upload/qrcode/ORD00009.png', '2'),
 (24, 'ORD00009', 'TORD00009J00012020070912', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Ayam Goyeng', '5', '12', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:21', 'assets/frontend/upload/qrcode/ORD00009.png', '2'),
 (25, 'ORD00010', 'TORD00010J0001202007098', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Kocheng Oren', '2', '8', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:27', 'assets/frontend/upload/qrcode/ORD00010.png', '2'),
-(26, 'ORD00010', 'TORD00010J0001202007099', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Buwung Puyuh', '2', '9', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:27', 'assets/frontend/upload/qrcode/ORD00010.png', '2'),
-(27, 'ORD00010', 'TORD00010J00012020070912', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Ayam Goyeng', '5', '12', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:27', 'assets/frontend/upload/qrcode/ORD00010.png', '2'),
-(28, 'ORD00011', 'TORD00011J0001202007098', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Kocheng Oren', '2', '8', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '2'),
+(26, 'ORD00010', 'TORD00010J0001202007099', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Buwung Puyuh', '2', '9', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:27', 'assets/frontend/upload/qrcode/ORD00010.png', '1'),
+(27, 'ORD00010', 'TORD00010J00012020070912', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Ayam Goyeng', '5', '12', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:27', 'assets/frontend/upload/qrcode/ORD00010.png', '1'),
+(28, 'ORD00011', 'TORD00011J0001202007098', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Kocheng Oren', '2', '8', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '1'),
 (29, 'ORD00011', 'TORD00011J0001202007099', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Buwung Puyuh', '2', '9', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '2'),
 (30, 'ORD00011', 'TORD00011J00012020070912', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Ayam Goyeng', '5', '12', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '2'),
 (31, 'ORD00012', 'TORD00012J0001202007095', 'J0001', 'PL0008', 'BNK0001', 'TJ001', 'Bambang', 'Selasa, 07 Juli 2020, 02:23', '2020-07-09', 'Bambang', '65', '5', '3', '02333332', 'Buah Batu', 'Bambang@gmail.com', '08-07-2020 02:23:08', 'assets/frontend/upload/qrcode/ORD00012.png', '2');
@@ -294,7 +294,7 @@ CREATE TABLE `tbl_pelanggan` (
 INSERT INTO `tbl_pelanggan` (`kd_pelanggan`, `username_pelanggan`, `password_pelanggan`, `no_ktp_pelanggan`, `nama_pelanggan`, `alamat_pelanggan`, `email_pelanggan`, `telpon_pelanggan`, `img_pelanggan`, `status_pelanggan`, `date_create_pelanggan`) VALUES
 ('PL0002', 'sella', '$2y$10$iV6Almk4gIrVuUeC2v5VG.8PxjaVQLgXakxMvrJcUp5TM9d3DxPx6', '02564651321564', 'sella', 'Gang Buntu', 'sellapurwita36@gmail.com', '089682261128', 'assets/frontend/img/default.png', 1, '1552202266'),
 ('PL0003', 'Dimas', '$2y$10$iV6Almk4gIrVuUeC2v5VG.8PxjaVQLgXakxMvrJcUp5TM9d3DxPx6', '346454215172455', 'Dimas', 'Cengkareng', 'dimasrestuadrianto@gmail.com', '6281299397276', 'assets/frontend/img/default.png', 1, '1552397128'),
-('PL0008', 'argahutama', '$2y$10$SP7XNH3lyq.iZ4dSND/LwuxJJvNII6sgxgyGyO.2b7Q.6jgdd7lDC', '', 'Arga Hutama', 'Alamat Palsu', 'argahuts@gmail.com', '023333333', 'assets/frontend/img/default.png', 1, '1593961592'),
+('PL0008', 'argahutama', '$2y$10$SP7XNH3lyq.iZ4dSND/LwuxJJvNII6sgxgyGyO.2b7Q.6jgdd7lDC', '', 'Arga Hutama', 'Jalan Jalan yuk', 'argahuts@gmail.com', '023333333', 'assets/frontend/img/default.png', 1, '1593961592'),
 ('PL0006', 'Rakel', '$2y$10$iV6Almk4gIrVuUeC2v5VG.8PxjaVQLgXakxMvrJcUp5TM9d3DxPx6', '', 'Rakel', 'Jl.in aja dulu', 'rizkifirmansyah435@gmail.com', '08745179471', 'assets/frontend/img/default.png', 1, '1554385261');
 
 -- --------------------------------------------------------
@@ -358,12 +358,14 @@ CREATE TABLE `tbl_tujuan` (
 --
 
 INSERT INTO `tbl_tujuan` (`kd_tujuan`, `kota_tujuan`, `nama_terminal_tujuan`, `terminal_tujuan`) VALUES
-('TJ001', 'jakarta', 'Terminal Kayu Besar', 'Jl. Auto Ring Road Kapuk Kamal Kayu Besar, Cengkareng, RT.7/RW.8, Cengkareng Bar., Cengkareng, Kota '),
-('TJ002', 'bandung', 'Terminal Bojongloa ', 'Jl. Raya Sawahan No.283, Situsaeur, Bojongloa Kidul, Kota Bandung, Jawa Barat 40235'),
-('TJ003', 'jakarta', 'Terminal Rawa Buaya', 'Jl. Darma Wanita 1 No.10, RT.7/RW.6, Duri Kosambi, Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibu'),
-('TJ004', 'jakarta', 'Termnial Kali Deres', 'Terminal bus Kalideres, Jl. Daan Mogot, RT.4/RW.1, Kalideres, West Jakarta City, Jakarta 11840'),
-('TJ005', 'bandung', 'Terminal Babakan', 'JL. Raya Gede Bage No.68, Babakan Penghulu, Cinambo, Bandung City, West Java 40295'),
-('TJ006', 'bandung', 'Terimnal Ledeng', 'Jl. Setiabudhi Dalam, Ledeng, Cidadap, Kota Bandung, Jawa Barat 40143');
+('TJ001', 'Surabaya', 'Terminal Kayu Besar', 'Jl. Letnan Jenderal S. Parman, Kasian, Kedungrejo, Kec. Waru, Kota SBY'),
+('TJ002', 'Bandung', 'Terminal Bojongloa ', 'Jl. Raya Sawahan No.283, Situsaeur, Bojongloa Kidul, Kota Bandung, Jawa Barat 40235'),
+('TJ003', 'Yogyakarta', 'Terminal Giwangan', 'Giwangan, Umbulharjo, Yogyakarta City, Special Region of Yogyakarta 55163'),
+('TJ004', 'Semarang', 'Terminal Penggaron', 'Penggaron Kidul, Pedurungan, Semarang'),
+('TJ005', 'Malang', 'Terminal Arjosari', 'Arjosari, Blimbing, Malang City, East Java 65126'),
+('TJ006', 'Palembang', 'Terimnal Alang-alang Lebar', 'Jl. Bypass Alang-Alang Lebar, Kec. Alang-Alang Lebar, Kota Palembang'),
+('TJ007', 'Medan', 'Terimnal Terpadu Amplas', 'Timbang Deli, Medan Amplas, Kota Medan, Sumatera Utara 20148'),
+('TJ008', 'Jakarta', 'Terimnal Pulogadung', 'Pulogadung, Jakarta Timur, DKI Jakarta');
 
 --
 -- Indexes for dumped tables
