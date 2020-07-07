@@ -33,7 +33,6 @@ class Order_41518110070 extends CI_Controller {
 	 	}
 	}
 	public function inserttiket($value=''){
-		// die(print_r($_POST));
 		$id = $this->input->post('kd_order');
 		$asal = $this->input->post('asal_beli');
 		$tiket = $this->input->post('kd_tiket');
@@ -51,7 +50,7 @@ class Order_41518110070 extends CI_Controller {
 		$pelanggan = $this->db->query("SELECT email_pelanggan FROM tbl_pelanggan_41518110070 WHERE kd_pelanggan ='".$data['cetak'][0]['kd_pelanggan']."'")->row_array();
 		$pdfFilePath = "assets/backend/upload/etiket/".$id.".pdf";
 		$html = $this->load->view('frontend/cetaktiket', $data, TRUE);
-		$this->load->library('m_pdf');
+	    $this->load->library('m_pdf');
 		$this->m_pdf->pdf->WriteHTML($html);
 		$this->m_pdf->pdf->Output($pdfFilePath);
 		for ($i=0; $i < count($nama) ; $i++) { 
@@ -72,7 +71,7 @@ class Order_41518110070 extends CI_Controller {
 		$this->db->insert('tbl_tiket_41518110070', $simpan);
 		}
 	    $this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
-		// redirect('backend/order_41518110070');
+		redirect('backend/order_41518110070');
 	}
 
 }
