@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2020 at 04:56 PM
+-- Generation Time: Jul 07, 2020 at 07:04 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -18,26 +18,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `41518110070_argatravel`
+-- Database: `argatravel_41518110070`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_access_menu`
+-- Table structure for table `tbl_access_menu_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_access_menu` (
+CREATE TABLE `tbl_access_menu_41518110070` (
   `kd_access_menu` int(11) DEFAULT NULL,
   `kd_level` int(11) DEFAULT NULL,
   `kd_menu` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_access_menu`
+-- Dumping data for table `tbl_access_menu_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_access_menu` (`kd_access_menu`, `kd_level`, `kd_menu`) VALUES
+INSERT INTO `tbl_access_menu_41518110070` (`kd_access_menu`, `kd_level`, `kd_menu`) VALUES
 (1, 1, 1),
 (2, 1, 2),
 (3, 2, 2),
@@ -98,6 +98,33 @@ INSERT INTO `tbl_bank_41518110070` (`kd_bank`, `nasabah_bank`, `nama_bank`, `nom
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_bus`
+--
+
+CREATE TABLE `tbl_bus` (
+  `kd_bus` varchar(50) NOT NULL,
+  `nama_bus` varchar(50) DEFAULT NULL,
+  `plat_bus` varchar(50) DEFAULT NULL,
+  `kapasitas_bus` int(13) DEFAULT NULL,
+  `status_bus` int(1) DEFAULT NULL,
+  `desc_bus` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_bus`
+--
+
+INSERT INTO `tbl_bus` (`kd_bus`, `nama_bus`, `plat_bus`, `kapasitas_bus`, `status_bus`, `desc_bus`) VALUES
+('B001', 'JKT1', 'B 4514 BLN', 19, 1, '--'),
+('B002', 'JKT2', 'B 4514 BLN', 19, 1, '--'),
+('B003', 'BDG1', 'B 4514 BLN', 19, 1, '--'),
+('B004', 'BDG2', 'B 4514 BLN', 19, 1, '--'),
+('B005', 'BDG3', 'B 4561 BLN', 19, 1, '--'),
+('B006', 'JKT3', 'B 1234 BLN', 19, 1, '--');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_jadwal_41518110070`
 --
 
@@ -149,7 +176,8 @@ INSERT INTO `tbl_konfirmasi_41518110070` (`kd_konfirmasi`, `kd_order`, `nama_kon
 ('KF0001', 'ORD00001', 'najsdkkasdn', 'BCA', '213123', '536000', '/assets/frontend/upload/payment/10__home.png'),
 ('KF0002', 'ORD00002', 'test', 'BCA', '23456543', '528000', '/assets/frontend/upload/payment/Penguins.jpg'),
 ('KF0003', 'ORD00003', 'adsdsa', 'BCA', '12', '290000', '/assets/frontend/upload/payment/14__laporan_transaksi1.png'),
-('KF0004', 'ORD00012', 'Bambang', 'Mandiri', '121212', '112500', '/assets/frontend/upload/payment/wea.JPG');
+('KF0004', 'ORD00012', 'Bambang', 'Mandiri', '121212', '112500', '/assets/frontend/upload/payment/wea.JPG'),
+('KF0005', 'ORD00013', 'Arga Hutama', 'BNI', '415181', '132000', '/assets/frontend/upload/payment/Untitled.png');
 
 -- --------------------------------------------------------
 
@@ -238,7 +266,8 @@ INSERT INTO `tbl_order_41518110070` (`id_order`, `kd_order`, `kd_tiket`, `kd_jad
 (28, 'ORD00011', 'TORD00011J0001202007098', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Kocheng Oren', '2', '8', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '1'),
 (29, 'ORD00011', 'TORD00011J0001202007099', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Buwung Puyuh', '2', '9', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '2'),
 (30, 'ORD00011', 'TORD00011J00012020070912', 'J0001', 'PL0008', 'BNK0002', 'TJ001', 'Kocheng Oren', 'Selasa, 07 Juli 2020, 02:20', '2020-07-09', 'Ayam Goyeng', '5', '12', '1', '023333333', 'Alamat Palsu', 'kocheng@gmail.com', '08-07-2020 02:20:59', 'assets/frontend/upload/qrcode/ORD00011.png', '2'),
-(31, 'ORD00012', 'TORD00012J0001202007095', 'J0001', 'PL0008', 'BNK0001', 'TJ001', 'Bambang', 'Selasa, 07 Juli 2020, 02:23', '2020-07-09', 'Bambang', '65', '5', '3', '02333332', 'Buah Batu', 'Bambang@gmail.com', '08-07-2020 02:23:08', 'assets/frontend/upload/qrcode/ORD00012.png', '2');
+(31, 'ORD00012', 'TORD00012J0001202007095', 'J0001', 'PL0008', 'BNK0001', 'TJ001', 'Bambang', 'Selasa, 07 Juli 2020, 02:23', '2020-07-09', 'Bambang', '65', '5', '3', '02333332', 'Buah Batu', 'Bambang@gmail.com', '08-07-2020 02:23:08', 'assets/frontend/upload/qrcode/ORD00012.png', '2'),
+(32, 'ORD00013', 'TORD00013J0005202007072', 'J0005', 'PL0008', 'BNK0004', 'TJ008', 'Arga Hutama', 'Selasa, 07 Juli 2020, 23:33', '2020-07-07', 'Otong Surotong', '35', '2', '12', '023333333', 'Jalan Jalan yuk', 'argahuts@gmail.com', '08-07-2020 23:33:53', 'assets/frontend/upload/qrcode/ORD00013.png', '1');
 
 -- --------------------------------------------------------
 
@@ -340,33 +369,6 @@ INSERT INTO `tbl_tujuan_41518110070` (`kd_tujuan`, `kota_tujuan`, `nama_terminal
 ('TJ007', 'Medan', 'Terimnal Terpadu Amplas', 'Timbang Deli, Medan Amplas, Kota Medan, Sumatera Utara 20148'),
 ('TJ008', 'Jakarta', 'Terimnal Pulogadung', 'Pulogadung, Jakarta Timur, DKI Jakarta');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_bus`
---
-
-CREATE TABLE `tbl_bus` (
-  `kd_bus` varchar(50) NOT NULL,
-  `nama_bus` varchar(50) DEFAULT NULL,
-  `plat_bus` varchar(50) DEFAULT NULL,
-  `kapasitas_bus` int(13) DEFAULT NULL,
-  `status_bus` int(1) DEFAULT NULL,
-  `desc_bus` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_bus`
---
-
-INSERT INTO `tbl_bus` (`kd_bus`, `nama_bus`, `plat_bus`, `kapasitas_bus`, `status_bus`, `desc_bus`) VALUES
-('B001', 'JKT1', 'B 4514 BLN', 19, 1, '--'),
-('B002', 'JKT2', 'B 4514 BLN', 19, 1, '--'),
-('B003', 'BDG1', 'B 4514 BLN', 19, 1, '--'),
-('B004', 'BDG2', 'B 4514 BLN', 19, 1, '--'),
-('B005', 'BDG3', 'B 4561 BLN', 19, 1, '--'),
-('B006', 'JKT3', 'B 1234 BLN', 19, 1, '--');
-
 --
 -- Indexes for dumped tables
 --
@@ -382,6 +384,12 @@ ALTER TABLE `tbl_admin_41518110070`
 --
 ALTER TABLE `tbl_bank_41518110070`
   ADD PRIMARY KEY (`kd_bank`);
+
+--
+-- Indexes for table `tbl_bus`
+--
+ALTER TABLE `tbl_bus`
+  ADD PRIMARY KEY (`kd_bus`);
 
 --
 -- Indexes for table `tbl_jadwal_41518110070`
@@ -440,12 +448,6 @@ ALTER TABLE `tbl_tujuan_41518110070`
   ADD PRIMARY KEY (`kd_tujuan`);
 
 --
--- Indexes for table `tbl_bus`
---
-ALTER TABLE `tbl_bus`
-  ADD PRIMARY KEY (`kd_bus`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -465,7 +467,7 @@ ALTER TABLE `tbl_menu_41518110070`
 -- AUTO_INCREMENT for table `tbl_order_41518110070`
 --
 ALTER TABLE `tbl_order_41518110070`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

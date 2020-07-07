@@ -79,12 +79,12 @@ class Jadwal_41518110070 extends CI_Controller {
 	 	}
 	}	
 	public function editharga($id=''){
-		$kode = $this->getkod_model->get_kodjad();
+		$kode = (trim(html_escape($this->input->post('kode'))));
 		$where = array('kd_jadwal' => $kode );
 		$update = array('harga_jadwal' =>  $this->input->post('harga'));
 		$this->db->update('tbl_jadwal_41518110070', $update,$where);
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
-		redirect('backend/jadwal_41518110070/viewjadwal/');
+		redirect('backend/jadwal_41518110070/');
 	}
 }
 
