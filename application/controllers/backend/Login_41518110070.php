@@ -52,12 +52,12 @@ class Login_41518110070 extends CI_Controller {
 	}
 	public function cekuser(){
     $username = strtolower($this->input->post('username'));
-    $ambil = $this->db->query('select * from 41518110070_tbl_admin where username_admin = "'.$username.'"')->row_array();
+    $ambil = $this->db->query('select * from tbl_admin_41518110070 where username_admin = "'.$username.'"')->row_array();
     $password = $this->input->post('password');
 
     if (password_verify($password,$ambil['password_admin'])) {
     	$this->db->where('username_admin',$username);
-        $query = $this->db->get('41518110070_tbl_admin');
+        $query = $this->db->get('tbl_admin_41518110070');
             foreach ($query->result() as $row) {
                 $sess = array(
                 	'kd_admin' => $row->kd_admin,

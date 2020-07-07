@@ -10,7 +10,7 @@ class Profile_41518110070 extends CI_Controller {
 		$this->load->view('frontend/profile');
 	}
 	public function profilesaya($id=''){
-		$data['profile'] = $this->db->query("SELECT * FROM 41518110070_tbl_pelanggan WHERE kd_pelanggan LIKE '".$id."'")->row_array();
+		$data['profile'] = $this->db->query("SELECT * FROM tbl_pelanggan_41518110070 WHERE kd_pelanggan LIKE '".$id."'")->row_array();
 		// die(print_r($data));
 		$this->load->view('frontend/profile',$data);
 	}
@@ -25,19 +25,19 @@ class Profile_41518110070 extends CI_Controller {
 			'alamat_pelanggan'		=> $this->input->post('alamat'),
 			'telpon_pelanggan'		=> $this->input->post('hp'),
 			 );
-		$this->db->update('41518110070_tbl_pelanggan', $update,$where);
+		$this->db->update('tbl_pelanggan_41518110070', $update,$where);
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
 		redirect('profile_41518110070/profilesaya/'.$id);
 	}
 	public function tiketsaya($id=''){
 		$this->getsecurity();
-		$data['tiket'] = $this->db->query("SELECT * FROM 41518110070_tbl_order WHERE kd_pelanggan ='".$id."' group by kd_order")->result_array();
+		$data['tiket'] = $this->db->query("SELECT * FROM tbl_order_41518110070 WHERE kd_pelanggan ='".$id."' group by kd_order")->result_array();
 		// die(print_r($data));
 		$this->load->view('frontend/tiketmu',$data);
 	}
 	public function changepassword($id=''){
 		$this->load->library('form_validation');
-		$pelanggan = $this->db->query("SELECT password_pelanggan FROM 41518110070_tbl_pelanggan where kd_pelanggan ='".$id."'")->row_array();
+		$pelanggan = $this->db->query("SELECT password_pelanggan FROM tbl_pelanggan_41518110070 where kd_pelanggan ='".$id."'")->row_array();
 		// die(print_r($pelanggan));
 		$this->form_validation->set_rules('currentpassword', 'currentpassword', 'trim|required|min_length[8]',array(
 			'required' => 'Masukan Password',
@@ -73,7 +73,7 @@ class Profile_41518110070 extends CI_Controller {
 				$update = array(
 				'password_pelanggan'			=> $password_hash,
 				 );
-				$this->db->update('41518110070_tbl_pelanggan', $update,$where);
+				$this->db->update('tbl_pelanggan_41518110070', $update,$where);
 				$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
 				redirect('profile_41518110070/profilesaya/'.$id);
 			}
@@ -88,6 +88,3 @@ class Profile_41518110070 extends CI_Controller {
 		}
 	}
 }
-
-/* End of file Profile.php */
-/* Location: ./application/controllers/Profile.php */

@@ -48,10 +48,10 @@ INSERT INTO `41518110070_tbl_access_menu` (`kd_access_menu`, `kd_level`, `kd_men
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_admin`
+-- Table structure for table `tbl_admin_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_admin` (
+CREATE TABLE `tbl_admin_41518110070` (
   `kd_admin` varchar(50) NOT NULL,
   `nama_admin` varchar(35) DEFAULT NULL,
   `username_admin` varchar(30) DEFAULT NULL,
@@ -64,20 +64,20 @@ CREATE TABLE `41518110070_tbl_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_admin`
+-- Dumping data for table `tbl_admin_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_admin` (`kd_admin`, `nama_admin`, `username_admin`, `password_admin`, `img_admin`, `email_admin`, `level_admin`, `status_admin`, `date_create_admin`) VALUES
+INSERT INTO `tbl_admin_41518110070` (`kd_admin`, `nama_admin`, `username_admin`, `password_admin`, `img_admin`, `email_admin`, `level_admin`, `status_admin`, `date_create_admin`) VALUES
 ('ADM0001', 'Arga Hutama', 'supervisor', '$2y$10$v25.H4XMgDztA2NmxeJQSeaRl2nKboXeRTo1BjPe37R0JG3rXraZG', 'assets/backend/img/default.png', 'owner@gmail.com', '1', 1, '1552819095'),
 ('ADM0002', 'Chelsea Islan', 'admin', '$2y$10$v25.H4XMgDztA2NmxeJQSeaRl2nKboXeRTo1BjPe37R0JG3rXraZG', 'assets/backend/img/default.png', 'adm@gmail.com', '2', 1, '1552276812');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_bank`
+-- Table structure for table `tbl_bank_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_bank` (
+CREATE TABLE `tbl_bank_41518110070` (
   `kd_bank` varchar(50) NOT NULL,
   `nasabah_bank` varchar(50) DEFAULT NULL,
   `nama_bank` varchar(50) DEFAULT NULL,
@@ -86,10 +86,10 @@ CREATE TABLE `41518110070_tbl_bank` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_bank`
+-- Dumping data for table `tbl_bank_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_bank` (`kd_bank`, `nasabah_bank`, `nama_bank`, `nomrek_bank`, `photo_bank`) VALUES
+INSERT INTO `tbl_bank_41518110070` (`kd_bank`, `nasabah_bank`, `nama_bank`, `nomrek_bank`, `photo_bank`) VALUES
 ('BNK0001', 'Arga Hutama', 'BCA', '54902520644', 'assets/frontend/img/bank/bca-icon.jpg'),
 ('BNK0002', 'Arga Hutama', 'MANDIRI', '6666666666', 'assets/frontend/img/bank/mandiri-icon.jpg'),
 ('BNK0003', 'Arga Hutama', 'BRI', '7777777777', 'assets/frontend/img/bank/bri-icon.jpg'),
@@ -98,10 +98,10 @@ INSERT INTO `41518110070_tbl_bank` (`kd_bank`, `nasabah_bank`, `nama_bank`, `nom
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_jadwal`
+-- Table structure for table `tbl_jadwal_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_jadwal` (
+CREATE TABLE `tbl_jadwal_41518110070` (
   `kd_jadwal` varchar(50) NOT NULL,
   `kd_bus` varchar(50) DEFAULT NULL,
   `kd_tujuan` varchar(50) DEFAULT NULL,
@@ -113,10 +113,10 @@ CREATE TABLE `41518110070_tbl_jadwal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_jadwal`
+-- Dumping data for table `tbl_jadwal_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_jadwal` (`kd_jadwal`, `kd_bus`, `kd_tujuan`, `kd_asal`, `wilayah_jadwal`, `jam_berangkat_jadwal`, `jam_tiba_jadwal`, `harga_jadwal`) VALUES
+INSERT INTO `tbl_jadwal_41518110070` (`kd_jadwal`, `kd_bus`, `kd_tujuan`, `kd_asal`, `wilayah_jadwal`, `jam_berangkat_jadwal`, `jam_tiba_jadwal`, `harga_jadwal`) VALUES
 ('J0001', 'B003', 'TJ001', 'TJ008', 'Surabaya', '07:00:00', '10:30:00', '112500'),
 ('J0002', 'B004', 'TJ002', 'TJ008', 'Bandung', '12:00:00', '15:45:00', '123000'),
 ('J0003', 'B005', 'TJ003', 'TJ008', 'Yogyakarta', '16:00:00', '19:00:00', '134000'),
@@ -128,10 +128,10 @@ INSERT INTO `41518110070_tbl_jadwal` (`kd_jadwal`, `kd_bus`, `kd_tujuan`, `kd_as
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_konfirmasi`
+-- Table structure for table `tbl_konfirmasi_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_konfirmasi` (
+CREATE TABLE `tbl_konfirmasi_41518110070` (
   `kd_konfirmasi` varchar(50) NOT NULL,
   `kd_order` varchar(50) DEFAULT NULL,
   `nama_konfirmasi` varchar(50) DEFAULT NULL,
@@ -142,10 +142,10 @@ CREATE TABLE `41518110070_tbl_konfirmasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_konfirmasi`
+-- Dumping data for table `tbl_konfirmasi_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_konfirmasi` (`kd_konfirmasi`, `kd_order`, `nama_konfirmasi`, `nama_bank_konfirmasi`, `norek_konfirmasi`, `total_konfirmasi`, `photo_konfirmasi`) VALUES
+INSERT INTO `tbl_konfirmasi_41518110070` (`kd_konfirmasi`, `kd_order`, `nama_konfirmasi`, `nama_bank_konfirmasi`, `norek_konfirmasi`, `total_konfirmasi`, `photo_konfirmasi`) VALUES
 ('KF0001', 'ORD00001', 'najsdkkasdn', 'BCA', '213123', '536000', '/assets/frontend/upload/payment/10__home.png'),
 ('KF0002', 'ORD00002', 'test', 'BCA', '23456543', '528000', '/assets/frontend/upload/payment/Penguins.jpg'),
 ('KF0003', 'ORD00003', 'adsdsa', 'BCA', '12', '290000', '/assets/frontend/upload/payment/14__laporan_transaksi1.png'),
@@ -154,48 +154,48 @@ INSERT INTO `41518110070_tbl_konfirmasi` (`kd_konfirmasi`, `kd_order`, `nama_kon
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_level`
+-- Table structure for table `tbl_level_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_level` (
+CREATE TABLE `tbl_level_41518110070` (
   `kd_level` int(11) NOT NULL,
   `nama_level` varchar(50) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_level`
+-- Dumping data for table `tbl_level_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_level` (`kd_level`, `nama_level`) VALUES
+INSERT INTO `tbl_level_41518110070` (`kd_level`, `nama_level`) VALUES
 (1, 'owner'),
 (2, 'administrator');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_menu`
+-- Table structure for table `tbl_menu_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_menu` (
+CREATE TABLE `tbl_menu_41518110070` (
   `kd_menu` int(11) NOT NULL,
   `nama_menu` varchar(50) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_menu`
+-- Dumping data for table `tbl_menu_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_menu` (`kd_menu`, `nama_menu`) VALUES
+INSERT INTO `tbl_menu_41518110070` (`kd_menu`, `nama_menu`) VALUES
 (1, 'owner'),
 (2, 'administrator');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_order`
+-- Table structure for table `tbl_order_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_order` (
+CREATE TABLE `tbl_order_41518110070` (
   `id_order` int(11) NOT NULL,
   `kd_order` varchar(50) DEFAULT NULL,
   `kd_tiket` varchar(50) DEFAULT NULL,
@@ -219,10 +219,10 @@ CREATE TABLE `41518110070_tbl_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_order`
+-- Dumping data for table `tbl_order_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_order` (`id_order`, `kd_order`, `kd_tiket`, `kd_jadwal`, `kd_pelanggan`, `kd_bank`, `asal_order`, `nama_order`, `tgl_beli_order`, `tgl_berangkat_order`, `nama_kursi_order`, `umur_kursi_order`, `no_kursi_order`, `no_ktp_order`, `no_tlpn_order`, `alamat_order`, `email_order`, `expired_order`, `qrcode_order`, `status_order`) VALUES
+INSERT INTO `tbl_order_41518110070` (`id_order`, `kd_order`, `kd_tiket`, `kd_jadwal`, `kd_pelanggan`, `kd_bank`, `asal_order`, `nama_order`, `tgl_beli_order`, `tgl_berangkat_order`, `nama_kursi_order`, `umur_kursi_order`, `no_kursi_order`, `no_ktp_order`, `no_tlpn_order`, `alamat_order`, `email_order`, `expired_order`, `qrcode_order`, `status_order`) VALUES
 (14, 'ORD00001', 'TORD00003J0004202007052', 'J0004', 'PL0001', 'BNK0004', 'TJ002', 'Arga Hutama', 'Minggu, 05 Juli 2020, 19:53', '2020-07-05', 'Arga Hutama', '89', '2', '021452125', '089509509444', 'Tinggal di gedung mercu', 'argahut@gmail.com', '06-07-2020 19:53:18', 'assets/frontend/upload/qrcode/ORD00003.png', '2'),
 (17, 'ORD00004', 'TORD00004J00062020070514', 'J0006', 'PL0008', 'BNK0004', 'TJ006', 'Arga Hutama', 'Minggu, 05 Juli 2020, 22:11', '2020-07-05', 'Anya Geraldine', '22', '14', '2312313123132', '023333333', 'Alamat Palsu', 'argahuts@gmail.com', '06-07-2020 22:11:43', 'assets/frontend/upload/qrcode/ORD00004.png', '2'),
 (18, 'ORD00005', 'TORD00005J0006202007051', 'J0006', 'PL0008', 'BNK0002', 'TJ006', 'Arga Hutama', 'Minggu, 05 Juli 2020, 22:14', '2020-07-05', 'Marcus Rashford', '23', '1', '23423423', '023333333', 'Alamat Palsu', 'argahuts@gmail.com', '06-07-2020 22:14:27', 'assets/frontend/upload/qrcode/ORD00005.png', '2'),
@@ -243,10 +243,10 @@ INSERT INTO `41518110070_tbl_order` (`id_order`, `kd_order`, `kd_tiket`, `kd_jad
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_pelanggan`
+-- Table structure for table `tbl_pelanggan_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_pelanggan` (
+CREATE TABLE `tbl_pelanggan_41518110070` (
   `kd_pelanggan` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `username_pelanggan` varchar(50) COLLATE latin1_general_ci NOT NULL,
   `password_pelanggan` varchar(200) COLLATE latin1_general_ci NOT NULL,
@@ -261,10 +261,10 @@ CREATE TABLE `41518110070_tbl_pelanggan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `41518110070_tbl_pelanggan`
+-- Dumping data for table `tbl_pelanggan_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_pelanggan` (`kd_pelanggan`, `username_pelanggan`, `password_pelanggan`, `no_ktp_pelanggan`, `nama_pelanggan`, `alamat_pelanggan`, `email_pelanggan`, `telpon_pelanggan`, `img_pelanggan`, `status_pelanggan`, `date_create_pelanggan`) VALUES
+INSERT INTO `tbl_pelanggan_41518110070` (`kd_pelanggan`, `username_pelanggan`, `password_pelanggan`, `no_ktp_pelanggan`, `nama_pelanggan`, `alamat_pelanggan`, `email_pelanggan`, `telpon_pelanggan`, `img_pelanggan`, `status_pelanggan`, `date_create_pelanggan`) VALUES
 ('PL0002', 'sella', '$2y$10$iV6Almk4gIrVuUeC2v5VG.8PxjaVQLgXakxMvrJcUp5TM9d3DxPx6', '02564651321564', 'sella', 'Gang Buntu', 'sellapurwita36@gmail.com', '089682261128', 'assets/frontend/img/default.png', 1, '1552202266'),
 ('PL0003', 'Dimas', '$2y$10$iV6Almk4gIrVuUeC2v5VG.8PxjaVQLgXakxMvrJcUp5TM9d3DxPx6', '346454215172455', 'Dimas', 'Cengkareng', 'dimasrestuadrianto@gmail.com', '6281299397276', 'assets/frontend/img/default.png', 1, '1552397128'),
 ('PL0008', 'argahutama', '$2y$10$SP7XNH3lyq.iZ4dSND/LwuxJJvNII6sgxgyGyO.2b7Q.6jgdd7lDC', '', 'Arga Hutama', 'Jalan Jalan yuk', 'argahuts@gmail.com', '023333333', 'assets/frontend/img/default.png', 1, '1593961592'),
@@ -273,10 +273,10 @@ INSERT INTO `41518110070_tbl_pelanggan` (`kd_pelanggan`, `username_pelanggan`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_tiket`
+-- Table structure for table `tbl_tiket_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_tiket` (
+CREATE TABLE `tbl_tiket_41518110070` (
   `kd_tiket` varchar(50) NOT NULL,
   `kd_order` varchar(50) DEFAULT NULL,
   `nama_tiket` varchar(50) DEFAULT NULL,
@@ -291,10 +291,10 @@ CREATE TABLE `41518110070_tbl_tiket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_tiket`
+-- Dumping data for table `tbl_tiket_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_tiket` (`kd_tiket`, `kd_order`, `nama_tiket`, `kursi_tiket`, `umur_tiket`, `asal_beli_tiket`, `harga_tiket`, `etiket_tiket`, `status_tiket`, `create_tgl_tiket`, `create_admin_tiket`) VALUES
+INSERT INTO `tbl_tiket_41518110070` (`kd_tiket`, `kd_order`, `nama_tiket`, `kursi_tiket`, `umur_tiket`, `asal_beli_tiket`, `harga_tiket`, `etiket_tiket`, `status_tiket`, `create_tgl_tiket`, `create_admin_tiket`) VALUES
 ('TORD00003J0004202007055', 'ORD00003', 'Arga Hutama', '5', '23 Tahun', 'TJ002', '145000', 'assets/backend/upload/etiket/ORD00003.pdf', '2', '2020-07-05', 'admin'),
 ('TORD00004J00062020070511', 'ORD00004', 'Arga Hutama', '11', '23 Tahun', 'TJ006', '128000', 'assets/backend/upload/etiket/ORD00004.pdf', '2', '2020-07-05', 'admin'),
 ('TORD00004J00062020070514', 'ORD00004', 'Anya Geraldine', '14', '22 Tahun', 'TJ006', '128000', 'assets/backend/upload/etiket/ORD00004.pdf', '2', '2020-07-05', 'admin'),
@@ -316,10 +316,10 @@ INSERT INTO `41518110070_tbl_tiket` (`kd_tiket`, `kd_order`, `nama_tiket`, `kurs
 -- --------------------------------------------------------
 
 --
--- Table structure for table `41518110070_tbl_tujuan`
+-- Table structure for table `tbl_tujuan_41518110070`
 --
 
-CREATE TABLE `41518110070_tbl_tujuan` (
+CREATE TABLE `tbl_tujuan_41518110070` (
   `kd_tujuan` varchar(50) NOT NULL,
   `kota_tujuan` varchar(50) NOT NULL,
   `nama_terminal_tujuan` varchar(50) NOT NULL,
@@ -327,10 +327,10 @@ CREATE TABLE `41518110070_tbl_tujuan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `41518110070_tbl_tujuan`
+-- Dumping data for table `tbl_tujuan_41518110070`
 --
 
-INSERT INTO `41518110070_tbl_tujuan` (`kd_tujuan`, `kota_tujuan`, `nama_terminal_tujuan`, `terminal_tujuan`) VALUES
+INSERT INTO `tbl_tujuan_41518110070` (`kd_tujuan`, `kota_tujuan`, `nama_terminal_tujuan`, `terminal_tujuan`) VALUES
 ('TJ001', 'Surabaya', 'Terminal Kayu Besar', 'Jl. Letnan Jenderal S. Parman, Kasian, Kedungrejo, Kec. Waru, Kota SBY'),
 ('TJ002', 'Bandung', 'Terminal Bojongloa ', 'Jl. Raya Sawahan No.283, Situsaeur, Bojongloa Kidul, Kota Bandung, Jawa Barat 40235'),
 ('TJ003', 'Yogyakarta', 'Terminal Giwangan', 'Giwangan, Umbulharjo, Yogyakarta City, Special Region of Yogyakarta 55163'),
@@ -372,48 +372,48 @@ INSERT INTO `tbl_bus` (`kd_bus`, `nama_bus`, `plat_bus`, `kapasitas_bus`, `statu
 --
 
 --
--- Indexes for table `41518110070_tbl_admin`
+-- Indexes for table `tbl_admin_41518110070`
 --
-ALTER TABLE `41518110070_tbl_admin`
+ALTER TABLE `tbl_admin_41518110070`
   ADD PRIMARY KEY (`kd_admin`);
 
 --
--- Indexes for table `41518110070_tbl_bank`
+-- Indexes for table `tbl_bank_41518110070`
 --
-ALTER TABLE `41518110070_tbl_bank`
+ALTER TABLE `tbl_bank_41518110070`
   ADD PRIMARY KEY (`kd_bank`);
 
 --
--- Indexes for table `41518110070_tbl_jadwal`
+-- Indexes for table `tbl_jadwal_41518110070`
 --
-ALTER TABLE `41518110070_tbl_jadwal`
+ALTER TABLE `tbl_jadwal_41518110070`
   ADD PRIMARY KEY (`kd_jadwal`),
   ADD KEY `kd_bus` (`kd_bus`),
   ADD KEY `kd_tujuan` (`kd_tujuan`);
 
 --
--- Indexes for table `41518110070_tbl_konfirmasi`
+-- Indexes for table `tbl_konfirmasi_41518110070`
 --
-ALTER TABLE `41518110070_tbl_konfirmasi`
+ALTER TABLE `tbl_konfirmasi_41518110070`
   ADD PRIMARY KEY (`kd_konfirmasi`),
   ADD KEY `kode_order` (`kd_order`);
 
 --
--- Indexes for table `41518110070_tbl_level`
+-- Indexes for table `tbl_level_41518110070`
 --
-ALTER TABLE `41518110070_tbl_level`
+ALTER TABLE `tbl_level_41518110070`
   ADD PRIMARY KEY (`kd_level`);
 
 --
--- Indexes for table `41518110070_tbl_menu`
+-- Indexes for table `tbl_menu_41518110070`
 --
-ALTER TABLE `41518110070_tbl_menu`
+ALTER TABLE `tbl_menu_41518110070`
   ADD PRIMARY KEY (`kd_menu`);
 
 --
--- Indexes for table `41518110070_tbl_order`
+-- Indexes for table `tbl_order_41518110070`
 --
-ALTER TABLE `41518110070_tbl_order`
+ALTER TABLE `tbl_order_41518110070`
   ADD PRIMARY KEY (`id_order`),
   ADD KEY `kd_jadwal` (`kd_jadwal`),
   ADD KEY `kd_kustomer` (`kd_pelanggan`),
@@ -421,22 +421,22 @@ ALTER TABLE `41518110070_tbl_order`
   ADD KEY `kd_bank` (`kd_bank`);
 
 --
--- Indexes for table `41518110070_tbl_pelanggan`
+-- Indexes for table `tbl_pelanggan_41518110070`
 --
-ALTER TABLE `41518110070_tbl_pelanggan`
+ALTER TABLE `tbl_pelanggan_41518110070`
   ADD PRIMARY KEY (`kd_pelanggan`);
 
 --
--- Indexes for table `41518110070_tbl_tiket`
+-- Indexes for table `tbl_tiket_41518110070`
 --
-ALTER TABLE `41518110070_tbl_tiket`
+ALTER TABLE `tbl_tiket_41518110070`
   ADD PRIMARY KEY (`kd_tiket`),
   ADD KEY `kode_order` (`kd_order`);
 
 --
--- Indexes for table `41518110070_tbl_tujuan`
+-- Indexes for table `tbl_tujuan_41518110070`
 --
-ALTER TABLE `41518110070_tbl_tujuan`
+ALTER TABLE `tbl_tujuan_41518110070`
   ADD PRIMARY KEY (`kd_tujuan`);
 
 --
@@ -450,21 +450,21 @@ ALTER TABLE `tbl_bus`
 --
 
 --
--- AUTO_INCREMENT for table `41518110070_tbl_level`
+-- AUTO_INCREMENT for table `tbl_level_41518110070`
 --
-ALTER TABLE `41518110070_tbl_level`
+ALTER TABLE `tbl_level_41518110070`
   MODIFY `kd_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `41518110070_tbl_menu`
+-- AUTO_INCREMENT for table `tbl_menu_41518110070`
 --
-ALTER TABLE `41518110070_tbl_menu`
+ALTER TABLE `tbl_menu_41518110070`
   MODIFY `kd_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `41518110070_tbl_order`
+-- AUTO_INCREMENT for table `tbl_order_41518110070`
 --
-ALTER TABLE `41518110070_tbl_order`
+ALTER TABLE `tbl_order_41518110070`
   MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 

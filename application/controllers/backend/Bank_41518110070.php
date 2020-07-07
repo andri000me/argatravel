@@ -18,13 +18,13 @@ class Bank_41518110070 extends CI_Controller {
 	}
 	public function index(){
 	$data['title'] = "Link BANK";
- 	$data['bank'] = $this->db->query("SELECT * FROM 41518110070_tbl_bank ")->result_array();
+ 	$data['bank'] = $this->db->query("SELECT * FROM tbl_bank_41518110070 ")->result_array();
 		// die(print_r($data));
 	$this->load->view('backend/bank', $data);	
 	}
 	public function viewbank($id=""){
 	$data['title'] = "Link BANK";
- 	$data['bank'] = $this->db->query("SELECT * FROM 41518110070_tbl_bank WHERE kd_bank = '".$id."'")->row_array();
+ 	$data['bank'] = $this->db->query("SELECT * FROM tbl_bank_41518110070 WHERE kd_bank = '".$id."'")->row_array();
 		// die(print_r($data));
 	$this->load->view('backend/view_bank', $data);	
 	}

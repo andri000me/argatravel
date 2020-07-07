@@ -19,14 +19,14 @@ class Jadwal_41518110070 extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = "List Tujuan";
-		$data['jadwal'] = $this->db->query("SELECT * FROM 41518110070_tbl_jadwal LEFT JOIN tbl_bus on 41518110070_tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_asal = 41518110070_tbl_tujuan.kd_tujuan ")->result_array();
+		$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal_41518110070 LEFT JOIN tbl_bus on tbl_jadwal_41518110070.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan_41518110070 on tbl_jadwal_41518110070.kd_asal = tbl_tujuan_41518110070.kd_tujuan ")->result_array();
 		// die(print_r($data));
 		$this->load->view('backend/jadwal', $data);
 	}
 	public function viewtambahjadwal($value=''){
 		$data['title'] = "Tambah Jadwal";
 		$data['bus'] = $this->db->query("SELECT * FROM tbl_bus ORDER BY nama_bus asc")->result_array();
-		$data['tujuan'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan ORDER BY kota_tujuan asc")->result_array();
+		$data['tujuan'] = $this->db->query("SELECT * FROM tbl_tujuan_41518110070 ORDER BY kota_tujuan asc")->result_array();
 		$this->load->view('backend/tambahjadwal', $data);
 	}
 	public function tambahjadwal(){
@@ -34,11 +34,11 @@ class Jadwal_41518110070 extends CI_Controller {
 		if ($this->form_validation->run() ==  FALSE) {
 			$data['title'] = "Tambah Jadwal";
 			$data['bus'] = $this->db->query("SELECT * FROM tbl_bus ORDER BY nama_bus asc")->result_array();
-			$data['tujuan'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan ORDER BY kota_tujuan asc")->result_array();
+			$data['tujuan'] = $this->db->query("SELECT * FROM tbl_tujuan_41518110070 ORDER BY kota_tujuan asc")->result_array();
 			$this->load->view('backend/tambahjadwal', $data);
 		} else {
 			$asal = $this->input->post('asal');
-			$tujuan = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan
+			$tujuan = $this->db->query("SELECT * FROM tbl_tujuan_41518110070
                WHERE kd_tujuan ='".$this->input->post('tujuan')."'")->row_array();
 			if ($asal == $tujuan['kd_tujuan']) {
 				$this->session->set_flashdata('message', 'swal("Berhasil", "Tujuan Jadwal Tidak Boleh Sama", "error");');
@@ -56,7 +56,7 @@ class Jadwal_41518110070 extends CI_Controller {
 					'harga_jadwal' =>  $this->input->post('harga'),
 					 );
 			// die(print_r($simpan));
-			$this->db->insert('41518110070_tbl_jadwal', $simpan);
+			$this->db->insert('tbl_jadwal_41518110070', $simpan);
 			$this->session->set_flashdata('message', 'swal("Berhasil", "Data Jadwal Di Simpan", "success");');
 			redirect('backend/jadwal_41518110070');
 			}
@@ -66,9 +66,9 @@ class Jadwal_41518110070 extends CI_Controller {
 	}
 	public function viewjadwal($id=''){
 		$data['title'] = "List Tujuan";
-	 	$sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_jadwal LEFT JOIN tbl_bus on 41518110070_tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan WHERE kd_jadwal ='".$id."'")->row_array();
+	 	$sqlcek = $this->db->query("SELECT * FROM tbl_jadwal_41518110070 LEFT JOIN tbl_bus on tbl_jadwal_41518110070.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan_41518110070 on tbl_jadwal_41518110070.kd_tujuan = tbl_tujuan_41518110070.kd_tujuan WHERE kd_jadwal ='".$id."'")->row_array();
 	 	if ($sqlcek) {
-	 		$data['asal'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan WHERE kd_tujuan = '".$sqlcek['kd_asal']."'")->row_array();
+	 		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan_41518110070 WHERE kd_tujuan = '".$sqlcek['kd_asal']."'")->row_array();
 	 		$data['jadwal'] = $sqlcek;
 			$data['title'] = "View jadwal";
 			// die(print_r($data));
@@ -82,7 +82,7 @@ class Jadwal_41518110070 extends CI_Controller {
 		$kode = $this->getkod_model->get_kodjad();
 		$where = array('kd_jadwal' => $kode );
 		$update = array('harga_jadwal' =>  $this->input->post('harga'));
-		$this->db->update('41518110070_tbl_jadwal', $update,$where);
+		$this->db->update('tbl_jadwal_41518110070', $update,$where);
 		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
 		redirect('backend/jadwal_41518110070/viewjadwal/');
 	}

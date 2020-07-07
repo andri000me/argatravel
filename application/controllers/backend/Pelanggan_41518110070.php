@@ -18,7 +18,7 @@ class Pelanggan_41518110070 extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = "List Pelanggan";
-		$data['pelanggan'] = $this->db->query("SELECT * FROM 41518110070_tbl_pelanggan")->result_array();
+		$data['pelanggan'] = $this->db->query("SELECT * FROM tbl_pelanggan_41518110070")->result_array();
 		// die(print_r($data));
 		$this->load->view('backend/pelanggan', $data);
 	}

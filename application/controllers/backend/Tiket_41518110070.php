@@ -18,13 +18,13 @@ class Tiket_41518110070 extends CI_Controller {
 	}
 	public function index(){
 	$data['title'] = "List Tiket";
-	$data['tiket'] = $this->db->query("SELECT * FROM 41518110070_tbl_tiket ")->result_array();
+	$data['tiket'] = $this->db->query("SELECT * FROM tbl_tiket_41518110070 ")->result_array();
 	// die(print_r($data));
 	$this->load->view('backend/tiket', $data);	
 	}
 	public function viewtiket($tiket){
 		$data['title'] = "List Tiket";
-		$data['tiket'] = $this->db->query("SELECT * FROM 41518110070_tbl_tiket WHERE kd_tiket = '".$tiket."'")->row_array();
+		$data['tiket'] = $this->db->query("SELECT * FROM tbl_tiket_41518110070 WHERE kd_tiket = '".$tiket."'")->row_array();
 		if ($data['tiket']) {
 			$this->load->view('backend/view_tiket', $data);
 		}else{

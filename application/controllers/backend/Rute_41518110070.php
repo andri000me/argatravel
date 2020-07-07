@@ -18,13 +18,13 @@ class Rute_41518110070 extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = "List Tujuan";
-		$data['tujuan'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan")->result_array();
+		$data['tujuan'] = $this->db->query("SELECT * FROM tbl_tujuan_41518110070")->result_array();
 		// die(print_r($data));
 		$this->load->view('backend/tujuan', $data);
 	}
 	public function viewrute($id=''){
 		$data['title'] = "List Tujuan";
-		$data['rute'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan WHERE kd_tujuan = '".$id."' ")->row_array();
+		$data['rute'] = $this->db->query("SELECT * FROM tbl_tujuan_41518110070 WHERE kd_tujuan = '".$id."' ")->row_array();
 		// die(print_r($data));
 		$this->load->view('backend/view_tujuan', $data);
 	}
@@ -36,7 +36,7 @@ class Rute_41518110070 extends CI_Controller {
 			'terminal_tujuan' => $this->input->post('terminal'),
 			 );
 		// die(print_r($data));
-		$this->db->insert('41518110070_tbl_tujuan', $data);
+		$this->db->insert('tbl_tujuan_41518110070', $data);
 		// $this->session->set_flashdata('message', 'swal("Data Berhasil Di Tambah");');
 		redirect('backend/rute_41518110070');
 	}
