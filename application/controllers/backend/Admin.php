@@ -19,7 +19,7 @@ class Admin extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = "List Admin";
-		$data['admin'] = $this->db->query("SELECT * FROM tbl_admin")->result_array();
+		$data['admin'] = $this->db->query("SELECT * FROM 41518110070_tbl_admin")->result_array();
 		// die(print_r($data));
 		$this->load->view('backend/admin', $data);
 	}

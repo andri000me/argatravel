@@ -17,14 +17,14 @@ class Order extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = "List Order";
- 		$data['order'] = $this->db->query("SELECT * FROM tbl_order group by kd_order")->result_array();
+ 		$data['order'] = $this->db->query("SELECT * FROM 41518110070_tbl_order group by kd_order")->result_array();
 		// die(print_r($data));
 		$this->load->view('backend/order', $data);
 	}
 	public function vieworder($id=''){
 		// die(print_r($_GET));
 		$cek = $this->input->get('order').$id;
-	 	$sqlcek = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal WHERE kd_order ='".$cek."'")->result_array();
+	 	$sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal WHERE kd_order ='".$cek."'")->result_array();
 	 	if ($sqlcek) {
 	 		$data['tiket'] = $sqlcek;
 			$data['title'] = "View Order";
@@ -48,10 +48,10 @@ class Order extends CI_Controller {
 		$status = $this->input->post('status');
 		$where = array('kd_order' => $id );
 		$update = array('status_order' => $status );
-		$this->db->update('tbl_order', $update,$where);
-		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan WHERE kd_tujuan ='".$asal."'")->row_array();
-		$data['cetak'] = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_order ='".$id."'")->result_array();
-		$pelanggan = $this->db->query("SELECT email_pelanggan FROM tbl_pelanggan WHERE kd_pelanggan ='".$data['cetak'][0]['kd_pelanggan']."'")->row_array();
+		$this->db->update('41518110070_tbl_order', $update,$where);
+		$data['asal'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan WHERE kd_tujuan ='".$asal."'")->row_array();
+		$data['cetak'] = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan WHERE kd_order ='".$id."'")->result_array();
+		$pelanggan = $this->db->query("SELECT email_pelanggan FROM 41518110070_tbl_pelanggan WHERE kd_pelanggan ='".$data['cetak'][0]['kd_pelanggan']."'")->row_array();
 		$pdfFilePath = "assets/backend/upload/etiket/".$id.".pdf";
 		$html = $this->load->view('frontend/cetaktiket', $data, TRUE);
 		$this->load->library('m_pdf');
@@ -72,7 +72,7 @@ class Order extends CI_Controller {
 				'create_admin_tiket' => $this->session->userdata('username_admin')
 			);
 		// die(print_r($simpan));
-		$this->db->insert('tbl_tiket', $simpan);
+		$this->db->insert('41518110070_tbl_tiket', $simpan);
 		}
 		// $this->session->set_flashdata('message', 'swal("Berhasil", "Tiket Order Berhasil Di Proses", "success");');
 		redirect('backend/order');

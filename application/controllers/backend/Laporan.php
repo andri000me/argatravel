@@ -21,13 +21,13 @@ class Laporan extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = 'Laporan';
-		$data['bulan'] = $this->db->query("SELECT DISTINCT DATE_FORMAT(create_tgl_tiket,'%M %Y') AS bulan FROM tbl_tiket")->result_array();
+		$data['bulan'] = $this->db->query("SELECT DISTINCT DATE_FORMAT(create_tgl_tiket,'%M %Y') AS bulan FROM 41518110070_tbl_tiket")->result_array();
 		$this->load->view('backend/laporan', $data);
 	}
 	public function laportanggal($value=''){
 		$data['mulai'] = $this->input->post('mulai');
 		$data['sampai'] = $this->input->post('sampai');
-		$data['laporan'] = $this->db->query("SELECT * FROM tbl_tiket WHERE (create_tgl_tiket BETWEEN '".$data['mulai']."' AND '".$data['sampai']."')")->result_array();
+		$data['laporan'] = $this->db->query("SELECT * FROM 41518110070_tbl_tiket WHERE (create_tgl_tiket BETWEEN '".$data['mulai']."' AND '".$data['sampai']."')")->result_array();
 		// for ($i=0; $i < count($data['laporan']) ; $i++) { 
 		// 	$total[$i] = $data['laporan'][$i]['harga_tiket'];
 		// }

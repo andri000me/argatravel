@@ -45,7 +45,7 @@
                     <td><?php echo hari_indo(date('N',strtotime($row['tgl_berangkat_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$row['tgl_berangkat_order'].'')));?></td>
                     <td><?php echo $row['nama_order']; ?></td>
                     <td><?php echo $row['tgl_beli_order']; ?></td>
-                    <?php $sqlcek = $this->db->query("SELECT * FROM tbl_order WHERE kd_order LIKE '".$row['kd_order']."'")->result_array(); ?>
+                    <?php $sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_order WHERE kd_order LIKE '".$row['kd_order']."'")->result_array(); ?>
                     <td><?php echo count($sqlcek); ?></td>
                     <?php if ($row['status_order'] == '1') { ?>
                           <td class="btn-danger"> Belum Bayar</td> 

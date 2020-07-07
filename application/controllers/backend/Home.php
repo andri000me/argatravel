@@ -12,9 +12,9 @@ class Home extends CI_Controller {
 	}
 	public function index(){
 		$data['title'] = "Home";
-		$data['order'] = $this->db->query("SELECT count(kd_order) FROM tbl_order WHERE status_order ='1'")->result_array();
-		$data['tiket'] = $this->db->query("SELECT count(kd_tiket) FROM tbl_tiket ")->result_array();
-		$data['konfirmasi'] = $this->db->query("SELECT count(kd_konfirmasi) FROM tbl_konfirmasi ")->result_array();
+		$data['order'] = $this->db->query("SELECT count(kd_order) FROM 41518110070_tbl_order WHERE status_order ='1'")->result_array();
+		$data['tiket'] = $this->db->query("SELECT count(kd_tiket) FROM 41518110070_tbl_tiket ")->result_array();
+		$data['konfirmasi'] = $this->db->query("SELECT count(kd_konfirmasi) FROM 41518110070_tbl_konfirmasi ")->result_array();
 		// die(print_r($data));
 		$this->load->view('backend/home', $data);
 	}

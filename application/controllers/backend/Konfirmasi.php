@@ -18,12 +18,12 @@ class Konfirmasi extends CI_Controller {
 	}
 	public function index(){
 	$data['title'] = "List Konfirmasi";
-	$data['konfirmasi'] = $this->db->query("SELECT * FROM tbl_konfirmasi group by kd_konfirmasi")->result_array();
+	$data['konfirmasi'] = $this->db->query("SELECT * FROM 41518110070_tbl_konfirmasi group by kd_konfirmasi")->result_array();
 // die(print_r($data));
 	$this->load->view('backend/konfirmasi', $data);	
 	}
 	public function viewkonfirmasi($id=''){
-	 $sqlcek = $this->db->query("SELECT * FROM tbl_konfirmasi WHERE kd_order ='".$id."'")->result_array();
+	 $sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_konfirmasi WHERE kd_order ='".$id."'")->result_array();
 	 $data['title'] = "View Konfirmasi";
 	 if ($sqlcek == NULL) {
 	 	$this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Kiriman Konfirmasi", "error");');

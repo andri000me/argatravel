@@ -19,9 +19,9 @@ class Tiket extends CI_Controller {
 		$this->session->unset_userdata(array('jadwal','asal','tanggal'));
 		// print_r($this->session->userdata());
 		$data['title'] = "Cek Jadwal";
-		$data['asal'] = $this->db->query("SELECT * FROM `tbl_tujuan` ORDER BY kota_tujuan ASC ")->result_array();
-		$data['tujuan'] = $this->db->query("SELECT * FROM `tbl_tujuan` group by kota_tujuan ORDER BY kota_tujuan ASC ")->result_array();
-		$data['list'] = $this->db->query("SELECT * FROM `tbl_tujuan` ORDER BY kota_tujuan ASC ")->result_array();
+		$data['asal'] = $this->db->query("SELECT * FROM `41518110070_tbl_tujuan` ORDER BY kota_tujuan ASC ")->result_array();
+		$data['tujuan'] = $this->db->query("SELECT * FROM `41518110070_tbl_tujuan` group by kota_tujuan ORDER BY kota_tujuan ASC ")->result_array();
+		$data['list'] = $this->db->query("SELECT * FROM `41518110070_tbl_tujuan` ORDER BY kota_tujuan ASC ")->result_array();
 		// die(print_r($data));
 		$this->load->view('frontend/cektanggal',$data);
 	}
@@ -34,9 +34,9 @@ class Tiket extends CI_Controller {
 		$data['tanggal'] = $this->input->get('tanggal').$tgl;
 		$asal = $this->input->get('asal').$asl;
 		$tujuan = $this->input->get('tujuan').$tjn;
-		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan
+		$data['asal'] = $this->db->query("SELECT * FROM 41518110070_tbl_tujuan
                WHERE kd_tujuan ='".$asal."'")->row_array();
-		$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal LEFT JOIN tbl_bus on tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE tbl_jadwal.wilayah_jadwal ='".$tujuan."' AND tbl_jadwal.kd_asal = '".$asal."'")->result_array();
+		$data['jadwal'] = $this->db->query("SELECT * FROM 41518110070_tbl_jadwal LEFT JOIN tbl_bus on 41518110070_tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan WHERE 41518110070_tbl_jadwal.wilayah_jadwal ='".$tujuan."' AND 41518110070_tbl_jadwal.kd_asal = '".$asal."'")->result_array();
 		// die(print_r($data));
 		if (!empty($data['jadwal'])) {
 			if ($tujuan == $data['asal']['kota_tujuan']) {
@@ -44,7 +44,7 @@ class Tiket extends CI_Controller {
     			redirect('tiket');
 			}else{
 				for ($i=0; $i < count($data['jadwal']); $i++) { 
-				$data['kursi'][$i] = $this->db->query("SELECT count(no_kursi_order) FROM tbl_order WHERE kd_jadwal = '".$data['jadwal'][$i]['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
+				$data['kursi'][$i] = $this->db->query("SELECT count(no_kursi_order) FROM 41518110070_tbl_order WHERE kd_jadwal = '".$data['jadwal'][$i]['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
 				};
 				// die(print_r($data));
 				$this->load->view('frontend/cekjadwal',$data);
@@ -65,10 +65,10 @@ class Tiket extends CI_Controller {
 			$id = $jadwal;
 			$asal = $asal;
 			$data['tanggal'] = $tanggal;
-			$data['asal'] =  $this->db->query("SELECT * FROM tbl_tujuan
+			$data['asal'] =  $this->db->query("SELECT * FROM 41518110070_tbl_tujuan
                WHERE kd_tujuan ='".$asal."'")->row_array();
-			$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal LEFT JOIN tbl_bus on tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_jadwal ='".$id."'")->row_array();
-			$data['kursi'] = $this->db->query("SELECT no_kursi_order FROM tbl_order WHERE kd_jadwal = '".$data['jadwal']['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
+			$data['jadwal'] = $this->db->query("SELECT * FROM 41518110070_tbl_jadwal LEFT JOIN tbl_bus on 41518110070_tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan WHERE kd_jadwal ='".$id."'")->row_array();
+			$data['kursi'] = $this->db->query("SELECT no_kursi_order FROM 41518110070_tbl_order WHERE kd_jadwal = '".$data['jadwal']['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
 			// print_r($this->session->userdata());
 			// die(print_r($data));
 			$this->load->view('frontend/beli_step1',$data);
@@ -79,7 +79,7 @@ class Tiket extends CI_Controller {
 	public function afterbeli(){
 		// die(print_r($_GET));
 		$data['kursi'] = $this->input->get('kursi');
-		$data['bank'] = $this->db->query("SELECT * FROM `tbl_bank` ")->result_array();
+		$data['bank'] = $this->db->query("SELECT * FROM `41518110070_tbl_bank` ")->result_array();
 		$data['kd_jadwal'] = $this->session->userdata('jadwal');
 		$data['asal'] = $this->session->userdata('asal');
 		$data['tglberangkat'] = $this->input->get('tgl');
@@ -94,7 +94,7 @@ class Tiket extends CI_Controller {
 	public function gettiket($value=''){
 		// die(print_r($_POST));
 	    include 'assets/phpqrcode/qrlib.php';
-	    $asal =  $this->db->query("SELECT * FROM tbl_tujuan
+	    $asal =  $this->db->query("SELECT * FROM 41518110070_tbl_tujuan
                WHERE kd_tujuan ='".$this->session->userdata('asal')."'")->row_array();		
 		$getkode =  $this->getkod_model->get_kodtmporder();
 		$kd_jadwal = $this->session->userdata('jadwal');
@@ -140,13 +140,13 @@ class Tiket extends CI_Controller {
 				'status_order'	=> $status
 			);
 			// die(print_r($simpan));
-			$this->db->insert('tbl_order', $simpan);
+			$this->db->insert('41518110070_tbl_order', $simpan);
 		}
 		redirect('tiket/checkout/'.$getkode);
 	}
 	public function cekorder($id=''){
 		$id = $this->input->post('kodetiket');
-		$sqlcek = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_bus on tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_bank on tbl_order.kd_bank = tbl_bank.kd_bank WHERE kd_order ='".$id."'")->result_array();
+		$sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN tbl_bus on 41518110070_tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal LEFT JOIN 41518110070_tbl_bank on 41518110070_tbl_order.kd_bank = 41518110070_tbl_bank.kd_bank WHERE kd_order ='".$id."'")->result_array();
 		if ($sqlcek == '') {
 		$data['tiket'] = $sqlcek;
 		// die(print_r($data));
@@ -159,7 +159,7 @@ class Tiket extends CI_Controller {
 	}
 	public function payment($id=''){
 		$this->getsecurity();
-		$sqlcek = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_bank on tbl_order.kd_bank = tbl_bank.kd_bank WHERE kd_order ='".$id."'")->result_array();
+		$sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal LEFT JOIN 41518110070_tbl_bank on 41518110070_tbl_order.kd_bank = 41518110070_tbl_bank.kd_bank WHERE kd_order ='".$id."'")->result_array();
 		$data['count'] = count($sqlcek);
 		$data['tiket'] = $sqlcek;
 		// die(print_r($data));
@@ -168,8 +168,8 @@ class Tiket extends CI_Controller {
 	public function checkout($value=''){
 		$this->getsecurity();
 		$data['tiket'] = $value;
-		$send['count'] = $this->db->query("SELECT count(kd_order) FROM tbl_order WHERE kd_order ='".$value."'")->row_array();
-		$send['sendmail'] = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan LEFT JOIN tbl_bank on tbl_order.kd_bank = tbl_bank.kd_bank WHERE kd_order ='".$value."'")->row_array();
+		$send['count'] = $this->db->query("SELECT count(kd_order) FROM 41518110070_tbl_order WHERE kd_order ='".$value."'")->row_array();
+		$send['sendmail'] = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan LEFT JOIN 41518110070_tbl_bank on 41518110070_tbl_order.kd_bank = 41518110070_tbl_bank.kd_bank WHERE kd_order ='".$value."'")->row_array();
 		//email
 		$subject = 'XTRANS';
 		$message = $this->load->view('frontend/sendmail',$send, TRUE);
@@ -200,7 +200,7 @@ class Tiket extends CI_Controller {
 	public function caritiket(){
 		// die(print_r($POST));
 		$id = $this->input->post('kodetiket');
-		$sqlcek = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_bus on tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal WHERE kd_order ='".$id."'")->result_array();
+		$sqlcek = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN tbl_bus on 41518110070_tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal WHERE kd_order ='".$id."'")->result_array();
 		if ($sqlcek == NULL) {
 			$this->session->set_flashdata('message', 'swal("Kosong", "Tidak Ada Tiket", "error");');
     		redirect('tiket/cektiket');
@@ -241,7 +241,7 @@ class Tiket extends CI_Controller {
 						'photo_konfirmasi' => $featured_image
 					);
 			// die(print_r($data));
-			$this->db->insert('tbl_konfirmasi', $data);
+			$this->db->insert('41518110070_tbl_konfirmasi', $data);
 			$this->session->set_flashdata('message', 'swal("Berhasil", "Terima Kasih Atas Konfirmasinya", "success");');
 			redirect('profile/tiketsaya/'.$this->session->userdata('kd_pelanggan'));
 		}
@@ -249,9 +249,9 @@ class Tiket extends CI_Controller {
 	public function cetak($id=''){
 		$this->getsecurity();
 		$order = $id;
-		$data['cetak'] = $this->db->query("SELECT * FROM tbl_order LEFT JOIN tbl_bus on tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_jadwal on tbl_order.kd_jadwal = tbl_jadwal.kd_jadwal LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_order ='".$id."'")->result_array();
+		$data['cetak'] = $this->db->query("SELECT * FROM 41518110070_tbl_order LEFT JOIN tbl_bus on 41518110070_tbl_order.kd_bus = tbl_bus.kd_bus LEFT JOIN 41518110070_tbl_jadwal on 41518110070_tbl_order.kd_jadwal = 41518110070_tbl_jadwal.kd_jadwal LEFT JOIN 41518110070_tbl_tujuan on 41518110070_tbl_jadwal.kd_tujuan = 41518110070_tbl_tujuan.kd_tujuan WHERE kd_order ='".$id."'")->result_array();
 
-		$tiket = $this->db->query("SELECT email_pelanggan FROM tbl_pelanggan WHERE kd_pelanggan ='".$data['cetak'][0]['kd_pelanggan']."'")->row_array();
+		$tiket = $this->db->query("SELECT email_pelanggan FROM 41518110070_tbl_pelanggan WHERE kd_pelanggan ='".$data['cetak'][0]['kd_pelanggan']."'")->row_array();
 		die(print_r($tiket));
 	}
 
