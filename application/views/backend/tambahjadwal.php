@@ -67,7 +67,7 @@
                     <input type="text" class="form-control"  id="time2" name="tiba" required="" placeholder="Jam Tiba">
                   </div>
                   <div class="form-group">
-                    <label  class="">Harga Jadwal</label>
+                    <label  class="">Harga</label>
                     <input type="number" class="form-control" name="harga" required="" placeholder="Harga">
                     <?php echo form_error('name'),'<small class="text-danger pl-3">','</small>'; ?>
                   </div>

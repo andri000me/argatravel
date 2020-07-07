@@ -41,7 +41,7 @@ class Jadwal extends CI_Controller {
 			$tujuan = $this->db->query("SELECT * FROM tbl_tujuan
                WHERE kd_tujuan ='".$this->input->post('tujuan')."'")->row_array();
 			if ($asal == $tujuan['kd_tujuan']) {
-				$this->session->set_flashdata('message', 'swal("Berhasil", "Tujuan JadwalT Tidak Boleh Sama", "error");');
+				$this->session->set_flashdata('message', 'swal("Berhasil", "Tujuan Jadwal Tidak Boleh Sama", "error");');
 			redirect('backend/jadwal');
 			}else{
 			$kode = $this->getkod_model->get_kodjad();
@@ -78,6 +78,14 @@ class Jadwal extends CI_Controller {
 			redirect('backend/jadwal');
 	 	}
 	}	
+	public function editharga($id=''){
+		$kode = $this->getkod_model->get_kodjad();
+		$where = array('kd_jadwal' => $kode );
+		$update = array('harga_jadwal' =>  $this->input->post('harga'));
+		$this->db->update('tbl_jadwal', $update,$where);
+		$this->session->set_flashdata('message', 'swal("Berhasil", "Data Di Edit", "success");');
+		redirect('backend/jadwal/viewjadwal/');
+	}
 }
 
 /* End of file Jadwal.php */

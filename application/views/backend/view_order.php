@@ -58,7 +58,7 @@
                   <div class="row form-group">
                     <label for="" class="col-sm-4 control-label">Umur Penumpang</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="umur_kursi[]>" value="<?php echo $row['umur_kursi_order'] ?> Tahun" readonly>
+                      <input type="text" class="form-control" name="umur_kursi[]" value="<?php echo $row['umur_kursi_order'] ?> Tahun" readonly>
                     </div>
                   </div>
                   <div class="row form-group">

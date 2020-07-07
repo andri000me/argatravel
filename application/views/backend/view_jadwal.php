@@ -126,7 +126,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
             </div>
             <hr>
             <a class="btn btn-default" href="javascript:history.back()"> Kembali</a>
-            <button data-toggle="modal" data-target="#edit" class="btn btn-primary pull-rigth">Edit</button>
+            <button data-toggle="modal" data-target="#edit" class="btn btn-primary pull-rigth">Edit Harga</button>
           </div>
       </div>
     </div>
@@ -166,20 +166,33 @@ span.onclick = function() {
 }
 </script>
 <?php $this->load->view('backend/include/base_js'); ?>
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ganti Password</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                
-            </div>
-          </div>
-        </div>
-        </div>
+<div class="modal fade bd-example-modal-lg" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Edit Harga</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form action="<?php echo base_url('backend/jadwal/editharga') ?>" method="post" enctype="multipart/form-data">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-sm-14">
+												<div class="row form-group">
+													<label for="nama" class="control-label">Masukkan Harga Baru</label>
+													<input type="text" class="form-control" name="harga" value="<?php echo $jadwal['harga_jadwal']?>" >
+													<input type="hidden" name="kode" value="<?php echo $jadwal['kd_jadwal']?>">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+									<button type="submit" class="btn btn-primary" >Simpan Perubahan</button>
+							</form>
+						</div>
+					</div>
+				</div>
 </body>
 </html>
